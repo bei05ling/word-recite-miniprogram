@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/study/study",
+    "pages/quiz/quiz",
+    "pages/mistakes/mistakes",
+    "pages/stats/stats",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTitleText": "拾词",
+    "navigationBarBackgroundColor": "#f7f3ea",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f3ea",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
+
