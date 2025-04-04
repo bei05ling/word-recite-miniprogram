@@ -1,0 +1,21 @@
+[
+  {
+    "id": "cet4",
+    "name": "大学英语四级",
+    "subtitle": "高频核心词汇",
+    "description": "从阅读与听力高频词开始，适合每天 20 分钟的学习节奏。",
+    "level": "CET-4",
+    "totalWords": 10,
+    "accent": "#2f6b4f"
+  },
+  {
+    "id": "campus",
+    "name": "校园生活",
+    "subtitle": "场景主题词汇",
+    "description": "围绕课堂、社团与日常生活组织的一组轻量词书。",
+    "level": "A2",
+    "totalWords": 0,
+    "accent": "#e8795e"
+  }
+]
+

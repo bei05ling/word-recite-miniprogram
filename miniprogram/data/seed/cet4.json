@@ -1,0 +1,93 @@
+[
+  {
+    "id": "cet4-001",
+    "word": "abandon",
+    "phonetic": "/əˈbændən/",
+    "syllables": ["a", "ban", "don"],
+    "meaning": "v. 放弃；抛弃",
+    "example": "They had to abandon the plan because of the storm.",
+    "translation": "因为暴风雨，他们不得不放弃计划。"
+  },
+  {
+    "id": "cet4-002",
+    "word": "benefit",
+    "phonetic": "/ˈbenɪfɪt/",
+    "syllables": ["ben", "e", "fit"],
+    "meaning": "n. 益处；v. 受益",
+    "example": "Regular reading can benefit your vocabulary.",
+    "translation": "经常阅读有助于扩大词汇量。"
+  },
+  {
+    "id": "cet4-003",
+    "word": "capacity",
+    "phonetic": "/kəˈpæsəti/",
+    "syllables": ["ca", "pac", "i", "ty"],
+    "meaning": "n. 能力；容量",
+    "example": "The hall has a capacity of five hundred people.",
+    "translation": "这个大厅可容纳五百人。"
+  },
+  {
+    "id": "cet4-004",
+    "word": "delicate",
+    "phonetic": "/ˈdelɪkət/",
+    "syllables": ["del", "i", "cate"],
+    "meaning": "adj. 精致的；微妙的",
+    "example": "She handled the delicate situation with care.",
+    "translation": "她谨慎地处理了这个微妙的局面。"
+  },
+  {
+    "id": "cet4-005",
+    "word": "efficient",
+    "phonetic": "/ɪˈfɪʃnt/",
+    "syllables": ["ef", "fi", "cient"],
+    "meaning": "adj. 高效的；有效率的",
+    "example": "The new process is more efficient than the old one.",
+    "translation": "新流程比旧流程更高效。"
+  },
+  {
+    "id": "cet4-006",
+    "word": "frequent",
+    "phonetic": "/ˈfriːkwənt/",
+    "syllables": ["fre", "quent"],
+    "meaning": "adj. 频繁的；经常发生的",
+    "example": "Frequent review helps move words into long-term memory.",
+    "translation": "频繁复习有助于把单词转为长期记忆。"
+  },
+  {
+    "id": "cet4-007",
+    "word": "generate",
+    "phonetic": "/ˈdʒenəreɪt/",
+    "syllables": ["gen", "er", "ate"],
+    "meaning": "v. 产生；生成",
+    "example": "The app can generate a new quiz every day.",
+    "translation": "这个应用每天都能生成一份新测试。"
+  },
+  {
+    "id": "cet4-008",
+    "word": "hesitate",
+    "phonetic": "/ˈhezɪteɪt/",
+    "syllables": ["hes", "i", "tate"],
+    "meaning": "v. 犹豫；迟疑",
+    "example": "Do not hesitate to ask questions in class.",
+    "translation": "课堂上不要犹豫，有问题就问。"
+  },
+  {
+    "id": "cet4-009",
+    "word": "identify",
+    "phonetic": "/aɪˈdentɪfaɪ/",
+    "syllables": ["i", "den", "ti", "fy"],
+    "meaning": "v. 识别；确认",
+    "example": "Can you identify the main idea of the passage?",
+    "translation": "你能找出这篇文章的主旨吗？"
+  },
+  {
+    "id": "cet4-010",
+    "word": "maintain",
+    "phonetic": "/meɪnˈteɪn/",
+    "syllables": ["main", "tain"],
+    "meaning": "v. 维持；坚持",
+    "example": "A short daily habit is easier to maintain.",
+    "translation": "每天坚持一个短习惯会更容易。"
+  }
+]
+
