@@ -1,0 +1,10 @@
+<view class="ring-wrap">
+  <view class="ring" style="{{ringStyle}}">
+    <view class="ring-core">
+      <text class="ring-value">{{displayPercent}}</text>
+      <text class="ring-symbol">%</text>
+    </view>
+  </view>
+  <text class="ring-caption">{{caption}}</text>
+</view>
+

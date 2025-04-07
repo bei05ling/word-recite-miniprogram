@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "今日学习",
+  "usingComponents": {
+    "progress-ring": "/components/progress-ring/index"
+  }
+}
+

@@ -1,0 +1,73 @@
+<view class="page-shell home">
+  <view class="hero-header">
+    <view>
+      <text class="eyebrow">DAILY PRACTICE · {{todayLabel}}</text>
+      <view class="page-title">把今天的词<br />留在脑子里。</view>
+    </view>
+    <button class="avatar-button" bindtap="openProfile">词</button>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading-card surface">正在整理今日计划...</view>
+
+  <block wx:else>
+    <view class="today-card surface">
+      <view class="today-copy">
+        <text class="book-level">{{currentBook.level}}</text>
+        <text class="book-name">{{currentBook.name}}</text>
+        <text class="book-subtitle">{{currentBook.subtitle}}</text>
+        <view class="streak-pill">
+          <text class="streak-dot"></text>
+          <text>已学习 {{streak}} 次</text>
+        </view>
+      </view>
+      <progress-ring percent="{{percent}}" caption="今日计划" />
+    </view>
+
+    <view class="metric-row">
+      <view class="metric surface">
+        <text class="metric-value">{{learnedCount}}</text>
+        <text class="metric-label">已学单词</text>
+      </view>
+      <view class="metric surface">
+        <text class="metric-value">{{dailyGoal}}</text>
+        <text class="metric-label">本词书总量</text>
+      </view>
+      <view class="metric metric-accent">
+        <text class="metric-value">{{percent}}%</text>
+        <text class="metric-label">完成进度</text>
+      </view>
+    </view>
+
+    <button class="primary-button start-button" bindtap="startStudy">
+      开始今日学习
+      <text class="button-arrow">→</text>
+    </button>
+
+    <view class="quick-grid">
+      <button class="quick-card surface" bindtap="startQuiz">
+        <text class="quick-index">01</text>
+        <text class="quick-title">拼写测试</text>
+        <text class="quick-desc">即时判分，检验记忆</text>
+      </button>
+      <button class="quick-card surface" bindtap="openMistakes">
+        <text class="quick-index">02</text>
+        <text class="quick-title">错词复习</text>
+        <text class="quick-desc">按记忆曲线再次出现</text>
+      </button>
+      <button class="quick-card surface wide" bindtap="openStats">
+        <view>
+          <text class="quick-index">03</text>
+          <text class="quick-title block">学习统计</text>
+          <text class="quick-desc">正确率、打卡与学习量</text>
+        </view>
+        <view class="mini-chart">
+          <view class="chart-bar h1"></view>
+          <view class="chart-bar h2"></view>
+          <view class="chart-bar h3"></view>
+          <view class="chart-bar h4"></view>
+        </view>
+      </button>
+    </view>
+  </block>
+</view>
+
