@@ -1,0 +1,41 @@
+<view class="page-shell study-page">
+  <view class="study-header">
+    <view>
+      <text class="eyebrow">FOCUS MODE</text>
+      <view class="study-title">第 {{currentIndex + 1}} 个单词</view>
+    </view>
+    <button class="close-button" bindtap="finish">×</button>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading surface">正在准备单词卡...</view>
+
+  <block wx:else>
+    <view class="progress-track">
+      <view
+        class="progress-fill"
+        style="width: {{words.length ? ((currentIndex + 1) / words.length * 100) : 0}}%;"
+      ></view>
+    </view>
+
+    <word-card
+      word="{{currentWord}}"
+      mastered="{{learnedIds.indexOf(currentWord.id) !== -1}}"
+      bind:mastered="markMastered"
+    />
+
+    <view class="study-tools">
+      <audio-button
+        word="{{currentWord.word}}"
+        label="听标准发音"
+        bind:error="handleAudioError"
+      />
+      <button class="skip-button" bindtap="goNext">暂时跳过</button>
+    </view>
+
+    <view class="nav-row">
+      <button class="nav-button" bindtap="goPrev" disabled="{{currentIndex === 0}}">← 上一个</button>
+      <button class="nav-button primary" bindtap="goNext">下一个 →</button>
+    </view>
+  </block>
+</view>
+

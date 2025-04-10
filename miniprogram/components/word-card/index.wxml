@@ -1,0 +1,46 @@
+<view wx:if="{{word}}" class="card-scene" bindtap="flip">
+  <view class="word-card {{flipped ? 'is-flipped' : ''}}">
+    <view class="card-face card-front">
+      <view class="card-topline">
+        <text class="card-label">WORD</text>
+        <text class="flip-hint">轻触翻面</text>
+      </view>
+      <view class="word-main">
+        <text class="word-text">{{word.word}}</text>
+        <text class="phonetic">{{word.phonetic}}</text>
+        <view class="syllable-row">
+          <text
+            wx:for="{{word.syllables}}"
+            wx:key="*this"
+            class="syllable"
+          >{{item}}</text>
+        </view>
+      </view>
+      <view class="card-footer">
+        <text class="footer-note">先回忆含义，再翻面确认</text>
+        <text class="footer-arrow">↗</text>
+      </view>
+    </view>
+
+    <view class="card-face card-back">
+      <view class="card-topline">
+        <text class="card-label light">MEANING</text>
+        <text class="flip-hint light">轻触返回</text>
+      </view>
+      <view class="meaning-main">
+        <text class="meaning-text">{{word.meaning}}</text>
+        <view class="example-block">
+          <text class="example">{{word.example}}</text>
+          <text class="translation">{{word.translation}}</text>
+        </view>
+      </view>
+      <button
+        class="mastery-button {{mastered ? 'active' : ''}}"
+        catchtap="toggleMastered"
+      >
+        {{mastered ? '已掌握 ✓' : '标记为已掌握'}}
+      </button>
+    </view>
+  </view>
+</view>
+
