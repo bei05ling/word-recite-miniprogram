@@ -1,0 +1,13 @@
+<button
+  class="audio-button {{playing ? 'playing' : ''}}"
+  bindtap="play"
+  aria-label="{{label}}"
+>
+  <view class="sound-icon">
+    <view class="sound-bar bar-one"></view>
+    <view class="sound-bar bar-two"></view>
+    <view class="sound-bar bar-three"></view>
+  </view>
+  <text>{{playing ? '播放中' : label}}</text>
+</button>
+

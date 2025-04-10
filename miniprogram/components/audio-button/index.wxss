@@ -1,0 +1,60 @@
+.audio-button {
+  display: inline-flex;
+  min-height: 76rpx;
+  padding: 0 28rpx;
+  align-items: center;
+  gap: 16rpx;
+  border: 1rpx solid rgba(47, 107, 79, 0.16);
+  border-radius: 999rpx;
+  color: #2f6b4f;
+  background: #edf4ef;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.sound-icon {
+  display: flex;
+  height: 28rpx;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.sound-bar {
+  width: 5rpx;
+  border-radius: 5rpx;
+  background: currentColor;
+}
+
+.bar-one {
+  height: 12rpx;
+}
+
+.bar-two {
+  height: 26rpx;
+}
+
+.bar-three {
+  height: 18rpx;
+}
+
+.playing .bar-one {
+  animation: pulse 0.8s ease-in-out infinite alternate;
+}
+
+.playing .bar-two {
+  animation: pulse 0.8s 0.2s ease-in-out infinite alternate;
+}
+
+.playing .bar-three {
+  animation: pulse 0.8s 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scaleY(0.45);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
