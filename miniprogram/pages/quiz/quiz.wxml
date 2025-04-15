@@ -1,0 +1,60 @@
+<view class="page-shell quiz-page">
+  <view class="quiz-header">
+    <view>
+      <text class="eyebrow">SPELLING TEST</text>
+      <view class="page-title small">听意思，拼单词。</view>
+    </view>
+    <view class="score-badge">{{score}}<text>/5</text></view>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading surface">正在生成题目...</view>
+
+  <view wx:elif="{{finished}}" class="result-panel surface">
+    <text class="result-kicker">ROUND COMPLETE</text>
+    <text class="result-score">{{score}}</text>
+    <text class="result-copy">本轮答对 {{score}} 题，错词已加入复习队列。</text>
+    <button class="primary-button full" bindtap="restart">再测一轮</button>
+  </view>
+
+  <block wx:else>
+    <view class="quiz-progress">
+      <text>QUESTION {{questionIndex + 1}} / {{words.length}}</text>
+      <view class="dots">
+        <view
+          wx:for="{{words}}"
+          wx:key="id"
+          class="dot {{index < questionIndex ? 'done' : ''}} {{index === questionIndex ? 'current' : ''}}"
+        ></view>
+      </view>
+    </view>
+
+    <view class="question-card surface">
+      <text class="clue">根据释义拼写单词</text>
+      <text class="meaning">{{question.meaning}}</text>
+      <text class="phonetic">{{question.phonetic}}</text>
+      <text class="length-hint">共 {{question.answerLength}} 个字母</text>
+    </view>
+
+    <view class="answer-area {{result || ''}}">
+      <input
+        class="answer-input"
+        value="{{answer}}"
+        disabled="{{!!result}}"
+        placeholder="在这里输入单词"
+        maxlength="40"
+        focus
+        bindinput="handleInput"
+        bindconfirm="submit"
+        confirm-type="done"
+      />
+      <view wx:if="{{result}}" class="feedback">
+        <text wx:if="{{result === 'correct'}}" class="feedback-correct">拼写正确 · Well done</text>
+        <text wx:else class="feedback-wrong">正确拼写：{{question.word}}</text>
+      </view>
+    </view>
+
+    <button wx:if="{{!result}}" class="primary-button full submit" bindtap="submit">提交答案</button>
+    <button wx:else class="primary-button full submit" bindtap="next">下一题 →</button>
+  </block>
+</view>
+
