@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "错词复习",
+  "usingComponents": {
+    "empty-state": "/components/empty-state/index"
+  }
+}
+

@@ -1,0 +1,42 @@
+<view class="page-shell mistakes-page">
+  <view class="page-heading">
+    <text class="eyebrow">REVIEW QUEUE</text>
+    <view class="page-title">错过的词，<br />再见一次。</view>
+    <text class="queue-note">{{dueCount}} 个单词已到复习时间</text>
+  </view>
+
+  <empty-state
+    wx:if="{{!mistakes.length}}"
+    title="错词本还是空的"
+    description="完成拼写测试后，答错的单词会按记忆节奏出现在这里。"
+    action-text="去学习单词"
+    bind:action="goStudy"
+  />
+
+  <view wx:elif="{{!current}}" class="round-finished surface">
+    <text class="round-mark">✓</text>
+    <text class="round-title">本轮复习完成</text>
+    <text class="round-copy">新的复习时间已经安排好，明天再回来巩固。</text>
+    <button class="secondary-button full" bindtap="goStudy">继续学习新词</button>
+  </view>
+
+  <block wx:else>
+    <view class="review-count">{{currentIndex + 1}} / {{mistakes.length}}</view>
+    <view class="review-card surface" bindtap="reveal">
+      <text class="review-word">{{current.word}}</text>
+      <text class="review-phonetic">{{current.phonetic}}</text>
+      <view wx:if="{{revealed}}" class="review-answer">
+        <text class="review-meaning">{{current.meaning}}</text>
+        <text class="review-level">记忆阶段 {{current.level + 1}} · 下次间隔 {{current.intervalDays}} 天</text>
+      </view>
+      <text wx:else class="reveal-hint">轻触查看释义</text>
+    </view>
+
+    <view wx:if="{{revealed}}" class="answer-actions">
+      <button class="answer-button wrong" data-correct="{{false}}" bindtap="answer">还不熟</button>
+      <button class="answer-button right" data-correct="{{true}}" bindtap="answer">记住了</button>
+    </view>
+    <button wx:else class="primary-button full reveal-button" bindtap="reveal">查看答案</button>
+  </block>
+</view>
+
