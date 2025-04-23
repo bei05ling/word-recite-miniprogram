@@ -1,0 +1,43 @@
+<view class="page-shell stats-page">
+  <view class="page-heading">
+    <text class="eyebrow">YOUR PROGRESS</text>
+    <view class="page-title">一点一点，<br />积累成记忆。</view>
+  </view>
+
+  <view class="hero-stat surface">
+    <text class="hero-number">{{streak}}</text>
+    <view class="hero-copy">
+      <text class="hero-title">连续学习天数</text>
+      <text class="hero-subtitle">保持稳定节奏，比一次学很多更有效。</text>
+    </view>
+  </view>
+
+  <view class="stats-grid">
+    <view class="stat-card surface">
+      <text class="stat-value">{{learnedCount}}</text>
+      <text class="stat-label">已掌握单词</text>
+    </view>
+    <view class="stat-card surface">
+      <text class="stat-value">{{accuracy}}<text class="unit">%</text></text>
+      <text class="stat-label">测试正确率</text>
+    </view>
+    <view class="stat-card surface">
+      <text class="stat-value">{{mistakeCount}}</text>
+      <text class="stat-label">复习队列</text>
+    </view>
+  </view>
+
+  <view class="week-card surface">
+    <view class="week-header">
+      <text class="section-title">最近 7 天</text>
+      <text class="week-caption">有学习记录的日期会点亮</text>
+    </view>
+    <view class="week-row">
+      <view wx:for="{{weekBars}}" wx:key="key" class="day-column">
+        <view class="day-bar {{item.active ? 'active' : ''}}"></view>
+        <text class="day-label">{{item.label}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

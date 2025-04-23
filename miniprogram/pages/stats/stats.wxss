@@ -1,0 +1,125 @@
+.page-heading {
+  padding-top: 20rpx;
+}
+
+.hero-stat {
+  display: flex;
+  margin-top: 48rpx;
+  padding: 40rpx 34rpx;
+  align-items: center;
+  gap: 32rpx;
+  color: #fff;
+  background:
+    radial-gradient(circle at 95% 12%, rgba(232, 121, 94, 0.35), transparent 32%),
+    var(--green);
+}
+
+.hero-number {
+  min-width: 150rpx;
+  font-family: Georgia, serif;
+  font-size: 116rpx;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  margin-top: 12rpx;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 22rpx;
+  line-height: 1.55;
+}
+
+.stats-grid {
+  display: grid;
+  margin-top: 18rpx;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14rpx;
+}
+
+.stat-card {
+  display: flex;
+  padding: 30rpx 20rpx;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.stat-value {
+  font-family: Georgia, serif;
+  font-size: 50rpx;
+  font-weight: 700;
+}
+
+.unit {
+  color: var(--muted);
+  font-size: 22rpx;
+}
+
+.stat-label {
+  margin-top: 8rpx;
+  color: var(--muted);
+  font-size: 20rpx;
+}
+
+.week-card {
+  margin-top: 18rpx;
+  padding: 34rpx 30rpx;
+}
+
+.week-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.week-caption {
+  color: var(--muted);
+  font-size: 19rpx;
+}
+
+.week-row {
+  display: flex;
+  height: 220rpx;
+  margin-top: 36rpx;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.day-column {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14rpx;
+}
+
+.day-bar {
+  width: 32rpx;
+  height: 38rpx;
+  border-radius: 16rpx 16rpx 6rpx 6rpx;
+  background: #e8e3da;
+}
+
+.day-bar.active {
+  height: 132rpx;
+  background: var(--green);
+}
+
+.day-label {
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-size: 18rpx;
+}
+
