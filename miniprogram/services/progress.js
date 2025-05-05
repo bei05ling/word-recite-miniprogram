@@ -18,6 +18,30 @@ function defaultProgress(wordbookId = 'cet4') {
   };
 }
 
+function mergeProgress(local, remote) {
+  if (!remote) {
+    return local;
+  }
+
+  return {
+    ...local,
+    ...remote,
+    wordbookId: local.wordbookId,
+    learnedWordIds: Array.from(
+      new Set([...(local.learnedWordIds || []), ...(remote.learnedWordIds || [])])
+    ),
+    studyDates: Array.from(
+      new Set([...(local.studyDates || []), ...(remote.studyDates || [])])
+    ),
+    quizCount: Math.max(Number(local.quizCount || 0), Number(remote.quizCount || 0)),
+    correctCount: Math.max(
+      Number(local.correctCount || 0),
+      Number(remote.correctCount || 0)
+    ),
+    version: Math.max(Number(local.version || 0), Number(remote.version || 0)),
+  };
+}
+
 function loadProgress(wordbookId = 'cet4') {
   const saved = storage.get(STORAGE_KEYS.PROGRESS, null);
   if (saved && saved.wordbookId === wordbookId) {
@@ -55,10 +79,13 @@ function recordQuiz(progress, correct) {
 }
 
 async function syncProgress(progress) {
-  return cloud.callFunction('progress', {
-    action: 'save',
+  const remote = await cloud.callFunction('progress', {
+    action: 'merge',
     progress,
   });
+  const merged = mergeProgress(progress, remote);
+  storage.set(STORAGE_KEYS.PROGRESS, merged);
+  return merged;
 }
 
 module.exports = {
@@ -66,6 +93,7 @@ module.exports = {
   saveProgress,
   markWordLearned,
   recordQuiz,
+  mergeProgress,
   syncProgress,
 };
 
