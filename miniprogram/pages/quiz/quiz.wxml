@@ -39,7 +39,7 @@
       <input
         class="answer-input"
         value="{{answer}}"
-        disabled="{{!!result}}"
+        disabled="{{result}}"
         placeholder="在这里输入单词"
         maxlength="40"
         focus

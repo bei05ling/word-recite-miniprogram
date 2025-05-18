@@ -2,7 +2,10 @@
   <view class="hero-header">
     <view>
       <text class="eyebrow">DAILY PRACTICE · {{todayLabel}}</text>
-      <view class="page-title">把今天的词<br />留在脑子里。</view>
+      <view class="page-title">
+        <text class="title-line">把今天的词</text>
+        <text class="title-line">留在脑子里。</text>
+      </view>
     </view>
     <button class="avatar-button" bindtap="openProfile">词</button>
   </view>

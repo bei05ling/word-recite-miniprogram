@@ -1,0 +1,147 @@
+.section-head {
+  display: flex;
+  margin-top: 54rpx;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.section-count {
+  color: var(--muted);
+  font-size: 22rpx;
+}
+
+.book-list {
+  display: flex;
+  margin-top: 20rpx;
+  flex-direction: column;
+  gap: 14rpx;
+}
+
+.book-row {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  align-items: stretch;
+  text-align: left;
+}
+
+.book-row.selected {
+  box-shadow: 0 0 0 2rpx rgba(47, 107, 79, 0.25), 0 18rpx 50rpx rgba(54, 66, 58, 0.08);
+}
+
+.book-accent {
+  width: 10rpx;
+  flex: none;
+}
+
+.book-copy {
+  display: flex;
+  min-width: 0;
+  padding: 30rpx 26rpx;
+  flex: 1;
+  flex-direction: column;
+}
+
+.book-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+}
+
+.book-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.book-tag {
+  padding: 5rpx 10rpx;
+  border-radius: 8rpx;
+  color: var(--green);
+  background: var(--green-soft);
+  font-size: 17rpx;
+  font-weight: 700;
+}
+
+.book-desc {
+  margin-top: 12rpx;
+  color: var(--muted);
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+
+.book-total {
+  margin-top: 16rpx;
+  color: var(--coral);
+  font-size: 19rpx;
+}
+
+.book-check {
+  display: flex;
+  width: 82rpx;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  font-size: 32rpx;
+}
+
+.settings-head {
+  margin-top: 52rpx;
+}
+
+.settings-card {
+  margin-top: 20rpx;
+  padding: 0 28rpx;
+}
+
+.setting-row {
+  display: flex;
+  min-height: 116rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting-title {
+  display: block;
+  font-size: 27rpx;
+  font-weight: 600;
+}
+
+.setting-desc {
+  display: block;
+  margin-top: 8rpx;
+  color: var(--muted);
+  font-size: 21rpx;
+}
+
+.setting-divider {
+  height: 1rpx;
+  background: rgba(31, 42, 36, 0.08);
+}
+
+.picker-value {
+  padding: 14rpx 22rpx;
+  border-radius: 18rpx;
+  color: var(--green);
+  background: var(--green-soft);
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.stats-entry {
+  display: flex;
+  width: 100%;
+  margin-top: 18rpx;
+  padding: 28rpx;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.entry-arrow {
+  color: var(--coral);
+  font-size: 34rpx;
+}
+

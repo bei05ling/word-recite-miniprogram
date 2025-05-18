@@ -1,7 +1,10 @@
 <view class="page-shell stats-page">
   <view class="page-heading">
     <text class="eyebrow">YOUR PROGRESS</text>
-    <view class="page-title">一点一点，<br />积累成记忆。</view>
+    <view class="page-title">
+      <text class="title-line">一点一点，</text>
+      <text class="title-line">积累成记忆。</text>
+    </view>
   </view>
 
   <view class="hero-stat surface">

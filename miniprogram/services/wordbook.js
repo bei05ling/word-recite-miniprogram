@@ -1,5 +1,4 @@
-const wordbooks = require('../data/seed/wordbooks.json');
-const cet4Words = require('../data/seed/cet4.json');
+const { wordbooks, cet4: cet4Words } = require('../data/seed/index');
 const storage = require('../utils/storage');
 const cloud = require('./cloud');
 const { STORAGE_KEYS } = require('../utils/constants');

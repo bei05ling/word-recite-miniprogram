@@ -4,7 +4,12 @@ const progressService = require('../../services/progress');
 Page({
   data: {
     loading: true,
-    currentBook: null,
+    currentBook: {
+      id: 'cet4',
+      level: 'CET-4',
+      name: '大学英语四级',
+      subtitle: '高频核心词汇',
+    },
     learnedCount: 0,
     dailyGoal: 20,
     percent: 0,

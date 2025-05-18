@@ -7,6 +7,7 @@ Page({
     words: [],
     currentWord: null,
     currentIndex: 0,
+    currentMastered: false,
     learnedIds: [],
     page: 0,
     hasMore: true,
@@ -38,6 +39,9 @@ Page({
         words: nextWords,
         currentWord: nextWords[currentIndex] || null,
         currentIndex,
+        currentMastered: nextWords[currentIndex]
+          ? this.data.learnedIds.includes(nextWords[currentIndex].id)
+          : false,
         page,
         hasMore: result.hasMore,
       });
@@ -57,6 +61,7 @@ Page({
         this.setData({
           currentIndex: index,
           currentWord: this.data.words[index],
+          currentMastered: this.data.learnedIds.includes(this.data.words[index].id),
         });
       } else {
         wx.showToast({ title: '本组单词已学完', icon: 'none' });
@@ -67,6 +72,7 @@ Page({
     this.setData({
       currentIndex: nextIndex,
       currentWord: this.data.words[nextIndex],
+      currentMastered: this.data.learnedIds.includes(this.data.words[nextIndex].id),
     });
   },
 
@@ -78,6 +84,7 @@ Page({
     this.setData({
       currentIndex: previousIndex,
       currentWord: this.data.words[previousIndex],
+      currentMastered: this.data.learnedIds.includes(this.data.words[previousIndex].id),
     });
   },
 
@@ -91,6 +98,7 @@ Page({
     progressService.syncProgress(nextProgress).catch(() => {});
     this.setData({
       learnedIds: nextProgress.learnedWordIds,
+      currentMastered: true,
     });
     wx.showToast({ title: '已标记掌握', icon: 'success' });
   },

@@ -49,6 +49,10 @@ button::after {
   line-height: 1.15;
 }
 
+.page-title .title-line {
+  display: block;
+}
+
 .surface {
   border: 1rpx solid rgba(31, 42, 36, 0.08);
   border-radius: 32rpx;

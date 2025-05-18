@@ -6,6 +6,14 @@ function ensureCloud() {
     throw new Error('当前基础库不支持云开发');
   }
 
+  if (typeof wx.getAccountInfoSync === 'function') {
+    const accountInfo = wx.getAccountInfoSync();
+    const appId = accountInfo.miniProgram.appId;
+    if (!appId || appId === 'touristappid') {
+      throw new Error('当前未配置正式 AppID，使用本地数据');
+    }
+  }
+
   if (!cloudReady) {
     wx.cloud.init({
       traceUser: true,

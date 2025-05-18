@@ -1,0 +1,75 @@
+<view class="page-shell profile-page">
+  <text class="eyebrow">LIBRARY & SETTINGS</text>
+  <view class="page-title">
+    <text class="title-line">选择今天</text>
+    <text class="title-line">要读的词。</text>
+  </view>
+
+  <view class="section-head">
+    <text class="section-title">我的词书</text>
+    <text class="section-count">{{wordbooks.length}} 本</text>
+  </view>
+
+  <view class="book-list">
+    <button
+      wx:for="{{wordbooks}}"
+      wx:key="id"
+      class="book-row surface {{currentWordbookId === item.id ? 'selected' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="selectWordbook"
+    >
+      <view class="book-accent" style="background: {{item.accent}};"></view>
+      <view class="book-copy">
+        <view class="book-title-row">
+          <text class="book-title">{{item.name}}</text>
+          <text class="book-tag">{{item.level}}</text>
+        </view>
+        <text class="book-desc">{{item.description}}</text>
+        <text class="book-total">{{item.totalWords}} 个单词</text>
+      </view>
+      <text class="book-check">{{currentWordbookId === item.id ? '✓' : '→'}}</text>
+    </button>
+  </view>
+
+  <view class="section-head settings-head">
+    <text class="section-title">学习设置</text>
+  </view>
+
+  <view class="settings-card surface">
+    <view class="setting-row">
+      <view>
+        <text class="setting-title">每日学习量</text>
+        <text class="setting-desc">建议从少量、稳定开始</text>
+      </view>
+      <picker
+        mode="selector"
+        range="{{goalOptions}}"
+        value="{{dailyGoalIndex}}"
+        bindchange="updateDailyGoal"
+      >
+        <view class="picker-value">{{settings.dailyGoal}} 词</view>
+      </picker>
+    </view>
+    <view class="setting-divider"></view>
+    <view class="setting-row">
+      <view>
+        <text class="setting-title">自动发音</text>
+        <text class="setting-desc">进入单词卡时自动播放</text>
+      </view>
+      <switch
+        checked="{{settings.autoPronounce}}"
+        color="#2f6b4f"
+        bindchange="toggleAutoPronounce"
+      />
+    </view>
+  </view>
+
+  <button class="stats-entry surface" bindtap="openStats">
+    <view>
+      <text class="setting-title">查看完整学习统计</text>
+      <text class="setting-desc">连续打卡、正确率与复习队列</text>
+    </view>
+    <text class="entry-arrow">→</text>
+  </button>
+</view>
+

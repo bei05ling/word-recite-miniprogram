@@ -1,7 +1,10 @@
 <view class="page-shell mistakes-page">
   <view class="page-heading">
     <text class="eyebrow">REVIEW QUEUE</text>
-    <view class="page-title">错过的词，<br />再见一次。</view>
+    <view class="page-title">
+      <text class="title-line">错过的词，</text>
+      <text class="title-line">再见一次。</text>
+    </view>
     <text class="queue-note">{{dueCount}} 个单词已到复习时间</text>
   </view>
 

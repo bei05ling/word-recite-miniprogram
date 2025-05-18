@@ -57,7 +57,9 @@ exports.main = async (event) => {
   };
 
   if (existing.data.length) {
-    const { _id, _openid, ...updateData } = payload;
+    const updateData = { ...payload };
+    delete updateData._id;
+    delete updateData._openid;
     await collection.doc(existing.data[0]._id).update({ data: updateData });
   } else {
     await collection.add({ data: payload });

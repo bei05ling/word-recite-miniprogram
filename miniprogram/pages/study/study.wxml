@@ -19,7 +19,7 @@
 
     <word-card
       word="{{currentWord}}"
-      mastered="{{learnedIds.indexOf(currentWord.id) !== -1}}"
+      mastered="{{currentMastered}}"
       bind:mastered="markMastered"
     />
 

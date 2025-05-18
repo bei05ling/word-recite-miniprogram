@@ -51,9 +51,9 @@
 
 读取当前用户进度。
 
-### `action: "save"`
+### `action: "merge"`
 
-参数：`progress`。按 `_openid` 写入或更新学习进度。
+参数：`progress`。按 `_openid` 读取现有进度，对已学单词、学习日期和累计答题数取并集后写回；客户端收到结果后再次合并本地缓存。
 
 ## quiz
 

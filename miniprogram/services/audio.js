@@ -1,6 +1,7 @@
 let audioContext = null;
 let audioOptionReady = false;
 let pendingWord = '';
+let audioStarted = false;
 
 function configureAudioOption() {
   if (audioOptionReady || typeof wx.setInnerAudioOption !== 'function') {
@@ -20,6 +21,10 @@ function getAudioContext() {
     audioContext.autoplay = false;
     audioContext.obeyMuteSwitch = false;
     audioContext.volume = 1;
+    audioContext.onPlay(() => {
+      pendingWord = '';
+      audioStarted = true;
+    });
     audioContext.onCanplay(() => {
       if (pendingWord) {
         audioContext.play();
@@ -36,17 +41,14 @@ function getTtsUrl(word) {
 function playWord(word) {
   const context = getAudioContext();
   pendingWord = word;
+  audioStarted = false;
   context.stop();
   context.src = getTtsUrl(word);
   context.play();
 
   // iOS 在首次设置 src 后可能尚未进入 canplay，用户手势内补一次播放。
   setTimeout(() => {
-    if (pendingWord === word && !context.paused) {
-      pendingWord = '';
-      return;
-    }
-    if (pendingWord === word) {
+    if (pendingWord === word && !audioStarted) {
       context.play();
     }
   }, 120);
