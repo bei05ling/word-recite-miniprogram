@@ -1,0 +1,265 @@
+[
+  {
+    "id": "campus-001",
+    "word": "academic",
+    "phonetic": "/ˌækəˈdemɪk/",
+    "syllables": [
+      "ac",
+      "a",
+      "dem",
+      "ic"
+    ],
+    "meaning": "adj. 学术的；学业的",
+    "example": "She received strong academic support from her tutor.",
+    "translation": "她从导师那里获得了有力的学业支持。"
+  },
+  {
+    "id": "campus-002",
+    "word": "assignment",
+    "phonetic": "/əˈsaɪnmənt/",
+    "syllables": [
+      "as",
+      "sign",
+      "ment"
+    ],
+    "meaning": "n. 作业；任务",
+    "example": "The assignment is due before Friday noon.",
+    "translation": "这项作业要在周五中午前提交。"
+  },
+  {
+    "id": "campus-003",
+    "word": "auditorium",
+    "phonetic": "/ˌɔːdɪˈtɔːriəm/",
+    "syllables": [
+      "au",
+      "di",
+      "to",
+      "ri",
+      "um"
+    ],
+    "meaning": "n. 礼堂；报告厅",
+    "example": "The opening lecture will be held in the auditorium.",
+    "translation": "开学讲座将在礼堂举行。"
+  },
+  {
+    "id": "campus-004",
+    "word": "canteen",
+    "phonetic": "/kænˈtiːn/",
+    "syllables": [
+      "can",
+      "teen"
+    ],
+    "meaning": "n. 食堂",
+    "example": "We usually meet at the canteen after class.",
+    "translation": "我们通常下课后在食堂见面。"
+  },
+  {
+    "id": "campus-005",
+    "word": "deadline",
+    "phonetic": "/ˈdedlaɪn/",
+    "syllables": [
+      "dead",
+      "line"
+    ],
+    "meaning": "n. 截止日期",
+    "example": "Write the deadline in your calendar.",
+    "translation": "把截止日期写进日历。"
+  },
+  {
+    "id": "campus-006",
+    "word": "dormitory",
+    "phonetic": "/ˈdɔːmətri/",
+    "syllables": [
+      "dor",
+      "mi",
+      "to",
+      "ry"
+    ],
+    "meaning": "n. 宿舍",
+    "example": "The dormitory closes at eleven at night.",
+    "translation": "宿舍晚上十一点关门。"
+  },
+  {
+    "id": "campus-007",
+    "word": "elective",
+    "phonetic": "/ɪˈlektɪv/",
+    "syllables": [
+      "e",
+      "lec",
+      "tive"
+    ],
+    "meaning": "n. 选修课；adj. 选修的",
+    "example": "I chose photography as my elective this term.",
+    "translation": "这学期我选了摄影作为选修课。"
+  },
+  {
+    "id": "campus-008",
+    "word": "faculty",
+    "phonetic": "/ˈfækəlti/",
+    "syllables": [
+      "fac",
+      "ul",
+      "ty"
+    ],
+    "meaning": "n. 学院；全体教员",
+    "example": "The faculty offers several language workshops.",
+    "translation": "学院开设了几门语言工作坊。"
+  },
+  {
+    "id": "campus-009",
+    "word": "freshman",
+    "phonetic": "/ˈfreʃmən/",
+    "syllables": [
+      "fresh",
+      "man"
+    ],
+    "meaning": "n. 大一新生",
+    "example": "Every freshman receives a campus guide.",
+    "translation": "每位新生都会收到一本校园指南。"
+  },
+  {
+    "id": "campus-010",
+    "word": "graduate",
+    "phonetic": "/ˈɡrædʒuət/",
+    "syllables": [
+      "grad",
+      "u",
+      "ate"
+    ],
+    "meaning": "v. 毕业；n. 毕业生",
+    "example": "She plans to graduate next summer.",
+    "translation": "她计划明年夏天毕业。"
+  },
+  {
+    "id": "campus-011",
+    "word": "laboratory",
+    "phonetic": "/ləˈbɒrətri/",
+    "syllables": [
+      "la",
+      "bor",
+      "a",
+      "to",
+      "ry"
+    ],
+    "meaning": "n. 实验室",
+    "example": "Please wear safety glasses in the laboratory.",
+    "translation": "进入实验室请佩戴护目镜。"
+  },
+  {
+    "id": "campus-012",
+    "word": "lecture",
+    "phonetic": "/ˈlektʃə/",
+    "syllables": [
+      "lec",
+      "ture"
+    ],
+    "meaning": "n. 讲座；v. 讲课",
+    "example": "The lecture starts at nine sharp.",
+    "translation": "讲座九点准时开始。"
+  },
+  {
+    "id": "campus-013",
+    "word": "library",
+    "phonetic": "/ˈlaɪbrəri/",
+    "syllables": [
+      "li",
+      "bra",
+      "ry"
+    ],
+    "meaning": "n. 图书馆",
+    "example": "The library has quiet study rooms on the third floor.",
+    "translation": "图书馆三楼有安静的学习室。"
+  },
+  {
+    "id": "campus-014",
+    "word": "presentation",
+    "phonetic": "/ˌpreznˈteɪʃn/",
+    "syllables": [
+      "pre",
+      "sen",
+      "ta",
+      "tion"
+    ],
+    "meaning": "n. 展示；报告",
+    "example": "Our group presentation lasts ten minutes.",
+    "translation": "我们小组的展示持续十分钟。"
+  },
+  {
+    "id": "campus-015",
+    "word": "professor",
+    "phonetic": "/prəˈfesə/",
+    "syllables": [
+      "pro",
+      "fes",
+      "sor"
+    ],
+    "meaning": "n. 教授",
+    "example": "The professor answered questions after class.",
+    "translation": "教授在课后回答了问题。"
+  },
+  {
+    "id": "campus-016",
+    "word": "scholarship",
+    "phonetic": "/ˈskɒləʃɪp/",
+    "syllables": [
+      "schol",
+      "ar",
+      "ship"
+    ],
+    "meaning": "n. 奖学金",
+    "example": "Her excellent grades earned a scholarship.",
+    "translation": "她优异的成绩获得了奖学金。"
+  },
+  {
+    "id": "campus-017",
+    "word": "semester",
+    "phonetic": "/sɪˈmestə/",
+    "syllables": [
+      "se",
+      "mes",
+      "ter"
+    ],
+    "meaning": "n. 学期",
+    "example": "The new semester begins in September.",
+    "translation": "新学期九月开始。"
+  },
+  {
+    "id": "campus-018",
+    "word": "seminar",
+    "phonetic": "/ˈsemɪnɑː/",
+    "syllables": [
+      "sem",
+      "i",
+      "nar"
+    ],
+    "meaning": "n. 研讨会；专题课",
+    "example": "The seminar focuses on academic writing.",
+    "translation": "这场研讨会聚焦学术写作。"
+  },
+  {
+    "id": "campus-019",
+    "word": "society",
+    "phonetic": "/səˈsaɪəti/",
+    "syllables": [
+      "so",
+      "ci",
+      "e",
+      "ty"
+    ],
+    "meaning": "n. 社团；社会",
+    "example": "The photography society meets every Thursday.",
+    "translation": "摄影社每周四活动。"
+  },
+  {
+    "id": "campus-020",
+    "word": "tutor",
+    "phonetic": "/ˈtjuːtə/",
+    "syllables": [
+      "tu",
+      "tor"
+    ],
+    "meaning": "n. 导师；家教",
+    "example": "My tutor helped me plan the research paper.",
+    "translation": "导师帮助我规划了研究论文。"
+  }
+]

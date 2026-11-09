@@ -1,0 +1,71 @@
+<view wx:if="{{notFound}}" class="page-shell missing-word">
+  <text class="missing-title">没有找到这个单词</text>
+  <text class="missing-copy">它可能来自尚未加载的词书，返回探索页重新选择即可。</text>
+  <button class="primary-button" bindtap="goBack">返回上一页</button>
+</view>
+
+<view wx:elif="{{word}}" class="page-shell detail-page">
+  <view class="word-stage">
+    <view class="stage-topline">
+      <text class="book-name">{{book.name}}</text>
+      <button class="favorite-button {{favorite ? 'active' : ''}}" bindtap="toggleFavorite">
+        {{favorite ? '已收藏' : '收藏'}}
+      </button>
+    </view>
+    <view class="word-main">
+      <text class="word-text">{{word.word}}</text>
+      <text class="phonetic">{{word.phonetic}}</text>
+      <view class="syllable-row">
+        <text wx:for="{{word.syllables}}" wx:key="*this" class="syllable">{{item}}</text>
+      </view>
+    </view>
+    <audio-button
+      word="{{word.word}}"
+      label="听标准发音"
+      bind:error="handleAudioError"
+    />
+  </view>
+
+  <view class="meaning-block surface">
+    <text class="block-label">词义</text>
+    <text class="meaning">{{word.meaning}}</text>
+    <view class="meaning-meta">
+      <text>{{book.level}}</text>
+      <text>{{word.syllables.length}} 个音节</text>
+      <text>{{word.word.length}} 个字母</text>
+    </view>
+  </view>
+
+  <view class="example-block surface">
+    <text class="block-label">放进一句话</text>
+    <text class="example">{{word.example}}</text>
+    <text class="translation">{{word.translation}}</text>
+  </view>
+
+  <view class="detail-actions">
+    <button class="primary-button" bindtap="markMastered">
+      {{mastered ? '已经掌握' : '标记为已掌握'}}
+    </button>
+    <button class="secondary-button" bindtap="startBook">继续学习本词书</button>
+  </view>
+
+  <view class="related-heading">
+    <text class="section-title">附近还有这些词</text>
+    <text class="related-note">来自 {{book.name}}</text>
+  </view>
+  <view class="related-list surface">
+    <button
+      wx:for="{{relatedWords}}"
+      wx:key="id"
+      class="related-row"
+      data-id="{{item.id}}"
+      bindtap="openRelated"
+    >
+      <view>
+        <text class="related-word">{{item.word}}</text>
+        <text class="related-meaning">{{item.meaning}}</text>
+      </view>
+      <text class="related-arrow">→</text>
+    </button>
+  </view>
+</view>

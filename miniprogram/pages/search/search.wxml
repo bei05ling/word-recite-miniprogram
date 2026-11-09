@@ -1,0 +1,69 @@
+<view class="page-shell search-page">
+  <view class="search-heading">
+    <view class="search-title">
+      <text class="title-line">查一个词，</text>
+      <text class="title-line">再把它放回语境。</text>
+    </view>
+    <text class="search-subtitle">支持英文、中文释义和例句检索</text>
+  </view>
+
+  <view class="search-box surface">
+    <input
+      class="search-input"
+      value="{{query}}"
+      placeholder="输入 abandon、旅行或校园"
+      confirm-type="search"
+      focus
+      bindinput="handleInput"
+    />
+    <button wx:if="{{query}}" class="clear-button" bindtap="clearSearch">清除</button>
+    <text wx:else class="search-count">{{resultCount}}</text>
+  </view>
+
+  <scroll-view class="filter-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="filter-row">
+      <button
+        wx:for="{{filters}}"
+        wx:key="id"
+        class="filter-chip {{activeBook === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="selectFilter"
+      >{{item.name}}</button>
+    </view>
+  </scroll-view>
+
+  <view class="result-heading">
+    <text class="section-title">搜索结果</text>
+    <text class="result-count">{{resultCount}} 条</text>
+  </view>
+
+  <empty-state
+    wx:if="{{!results.length}}"
+    title="没有找到相关单词"
+    description="换一个关键词，或切换到“全部”词书再试一次。"
+  />
+
+  <view wx:else class="result-list">
+    <button
+      wx:for="{{results}}"
+      wx:key="id"
+      class="result-row"
+      data-book-id="{{item.bookId}}"
+      data-word-id="{{item.id}}"
+      bindtap="openWord"
+    >
+      <view class="result-main">
+        <view class="result-word-row">
+          <text class="result-word">{{item.word}}</text>
+          <text class="result-phonetic">{{item.phonetic}}</text>
+        </view>
+        <text class="result-meaning">{{item.meaning}}</text>
+        <view class="result-meta">
+          <text class="result-book" style="color: {{item.accent}};">{{item.bookName}}</text>
+          <text>{{item.syllables.length}} 个音节</text>
+        </view>
+      </view>
+      <text class="result-arrow">→</text>
+    </button>
+  </view>
+</view>

@@ -1,75 +1,209 @@
 <view class="page-shell profile-page">
-  <text class="eyebrow">LIBRARY & SETTINGS</text>
-  <view class="page-title">
-    <text class="title-line">选择今天</text>
-    <text class="title-line">要读的词。</text>
-  </view>
-
-  <view class="section-head">
-    <text class="section-title">我的词书</text>
-    <text class="section-count">{{wordbooks.length}} 本</text>
-  </view>
-
-  <view class="book-list">
-    <button
-      wx:for="{{wordbooks}}"
-      wx:key="id"
-      class="book-row surface {{currentWordbookId === item.id ? 'selected' : ''}}"
-      data-id="{{item.id}}"
-      bindtap="selectWordbook"
-    >
-      <view class="book-accent" style="background: {{item.accent}};"></view>
-      <view class="book-copy">
-        <view class="book-title-row">
-          <text class="book-title">{{item.name}}</text>
-          <text class="book-tag">{{item.level}}</text>
+  <view class="profile-hero">
+    <view class="profile-top">
+      <view class="avatar">{{avatarText}}</view>
+      <view class="identity">
+        <text class="profile-name">{{profile.nickname}}</text>
+        <text class="profile-note">{{profile.note}}</text>
+        <view class="identity-meta">
+          <text class="identity-chip">{{learnerLevel}}</text>
+          <text>在这里学习 {{joinedDays}} 天</text>
         </view>
-        <text class="book-desc">{{item.description}}</text>
-        <text class="book-total">{{item.totalWords}} 个单词</text>
       </view>
-      <text class="book-check">{{currentWordbookId === item.id ? '✓' : '→'}}</text>
-    </button>
+      <button class="edit-button" bindtap="toggleProfileEditor">
+        {{editingProfile ? '取消' : '编辑'}}
+      </button>
+    </view>
+
+    <view wx:if="{{editingProfile}}" class="profile-editor">
+      <view class="editor-field">
+        <text class="editor-label">昵称</text>
+        <input
+          class="editor-input"
+          value="{{profileDraft}}"
+          maxlength="12"
+          focus
+          bindinput="updateNicknameDraft"
+        />
+      </view>
+      <view class="editor-field">
+        <text class="editor-label">一句话介绍</text>
+        <input
+          class="editor-input"
+          value="{{noteDraft}}"
+          maxlength="28"
+          bindinput="updateNoteDraft"
+        />
+      </view>
+      <button class="save-profile" bindtap="saveProfile">保存资料</button>
+    </view>
+
+    <view class="hero-stats">
+      <view class="hero-stat">
+        <text class="hero-value">{{totalLearned}}</text>
+        <text class="hero-label">累计掌握</text>
+      </view>
+      <view class="hero-divider"></view>
+      <view class="hero-stat">
+        <text class="hero-value">{{streak}}</text>
+        <text class="hero-label">连续学习</text>
+      </view>
+      <view class="hero-divider"></view>
+      <view class="hero-stat">
+        <text class="hero-value">{{accuracy}}<text class="hero-unit">%</text></text>
+        <text class="hero-label">测试正确率</text>
+      </view>
+    </view>
   </view>
 
-  <view class="section-head settings-head">
-    <text class="section-title">学习设置</text>
-  </view>
+  <view wx:if="{{loading}}" class="profile-loading surface">正在整理你的学习档案...</view>
 
-  <view class="settings-card surface">
-    <view class="setting-row">
-      <view>
-        <text class="setting-title">每日学习量</text>
-        <text class="setting-desc">建议从少量、稳定开始</text>
+  <block wx:else>
+    <view class="section-heading">
+      <text class="section-title">学习档案</text>
+      <text class="section-note">当前进度与最近任务</text>
+    </view>
+
+    <view class="archive-panel surface">
+      <view class="archive-book">
+        <view>
+          <text class="archive-label">正在学习</text>
+          <text class="archive-name">{{currentBook.name}}</text>
+          <text class="archive-detail">{{currentBook.level}} · 已掌握 {{currentBook.learnedCount}} / {{currentBook.totalWords}} 词</text>
+        </view>
+        <text class="archive-percent">{{currentBookProgress}}%</text>
       </view>
-      <picker
-        mode="selector"
-        range="{{goalOptions}}"
-        value="{{dailyGoalIndex}}"
-        bindchange="updateDailyGoal"
+      <view class="progress-track">
+        <view class="progress-fill" style="width: {{currentBookProgress}}%; background: {{currentBook.accent}};"></view>
+      </view>
+      <view class="archive-actions">
+        <button class="archive-action primary" bindtap="startStudy">
+          <text class="action-title">继续学习</text>
+          <text class="action-note">从上次的位置继续</text>
+        </button>
+        <button class="archive-action" bindtap="startQuiz">
+          <text class="action-title">拼写测试</text>
+          <text class="action-note">检验本轮记忆</text>
+        </button>
+        <button class="archive-action" bindtap="openMistakes">
+          <text class="action-title">{{dueCount}} 个待复习</text>
+          <text class="action-note">按遗忘曲线安排</text>
+        </button>
+      </view>
+      <button class="stats-link" bindtap="openStats">
+        <text>查看完整学习统计</text>
+        <text class="link-arrow">→</text>
+      </button>
+    </view>
+
+    <view class="profile-tools">
+      <button class="profile-tool surface" bindtap="openSearch">
+        <text class="tool-title">查一个词</text>
+        <text class="tool-note">搜索 100 个词条</text>
+      </button>
+      <button class="profile-tool surface" bindtap="openNotebook">
+        <text class="tool-title">收藏本</text>
+        <text class="tool-note">收好想再见的词</text>
+      </button>
+    </view>
+
+    <view class="section-heading achievement-heading">
+      <text class="section-title">学习印记</text>
+      <button class="section-link" bindtap="openAchievements">查看全部 {{achievements.length}} 枚</button>
+    </view>
+
+    <scroll-view class="achievement-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+      <view class="achievement-list">
+        <view
+          wx:for="{{achievements}}"
+          wx:key="id"
+          class="achievement-item {{item.unlocked ? 'unlocked' : ''}}"
+        >
+          <view class="achievement-mark">{{item.mark}}</view>
+          <text class="achievement-title">{{item.title}}</text>
+          <text class="achievement-desc">{{item.description}}</text>
+          <text class="achievement-progress">{{item.unlocked ? '已解锁' : item.progressText}}</text>
+        </view>
+      </view>
+    </scroll-view>
+
+    <view class="section-heading">
+      <text class="section-title">我的词书</text>
+      <button class="section-link" bindtap="openLibrary">浏览词书</button>
+    </view>
+
+    <view class="library-panel surface">
+      <button
+        wx:for="{{wordbooks}}"
+        wx:key="id"
+        class="book-row {{currentWordbookId === item.id ? 'selected' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="selectWordbook"
       >
-        <view class="picker-value">{{settings.dailyGoal}} 词</view>
-      </picker>
+        <view class="book-swatch" style="background: {{item.accent}};"></view>
+        <view class="book-copy">
+          <view class="book-title-row">
+            <text class="book-title">{{item.name}}</text>
+            <text class="book-level">{{item.level}}</text>
+          </view>
+          <text class="book-desc">{{item.description}}</text>
+          <view class="book-progress-row">
+            <view class="book-progress-track">
+              <view class="book-progress-fill" style="width: {{item.progress}}%; background: {{item.accent}};"></view>
+            </view>
+            <text class="book-progress-text">{{item.learnedCount}}/{{item.totalWords}}</text>
+          </view>
+        </view>
+        <text class="book-state">{{currentWordbookId === item.id ? '当前' : '切换'}}</text>
+      </button>
     </view>
-    <view class="setting-divider"></view>
-    <view class="setting-row">
-      <view>
-        <text class="setting-title">自动发音</text>
-        <text class="setting-desc">进入单词卡时自动播放</text>
+
+    <view class="section-heading">
+      <text class="section-title">学习偏好</text>
+      <text class="section-note">本地保存</text>
+    </view>
+
+    <view class="settings-panel surface">
+      <view class="setting-row">
+        <view class="setting-copy">
+          <text class="setting-title">每日学习量</text>
+          <text class="setting-desc">按自己的节奏设置，不必一次学太多</text>
+        </view>
+        <picker
+          mode="selector"
+          range="{{goalOptions}}"
+          value="{{dailyGoalIndex}}"
+          bindchange="updateDailyGoal"
+        >
+          <view class="picker-value">{{settings.dailyGoal}} 词</view>
+        </picker>
       </view>
-      <switch
-        checked="{{settings.autoPronounce}}"
-        color="#2f6b4f"
-        bindchange="toggleAutoPronounce"
-      />
+      <view class="setting-divider"></view>
+      <view class="setting-row">
+        <view class="setting-copy">
+          <text class="setting-title">自动发音</text>
+          <text class="setting-desc">进入单词卡时准备播放 TTS</text>
+        </view>
+        <switch
+          checked="{{settings.autoPronounce}}"
+          color="#2f6b4f"
+          bindchange="toggleAutoPronounce"
+        />
+      </view>
+      <view class="setting-divider"></view>
+      <view class="setting-row">
+        <view class="setting-copy">
+          <text class="setting-title">触感反馈</text>
+          <text class="setting-desc">切换词书时给出轻触反馈</text>
+        </view>
+        <switch
+          checked="{{settings.hapticFeedback}}"
+          color="#2f6b4f"
+          bindchange="toggleHaptic"
+        />
+      </view>
     </view>
-  </view>
 
-  <button class="stats-entry surface" bindtap="openStats">
-    <view>
-      <text class="setting-title">查看完整学习统计</text>
-      <text class="setting-desc">连续打卡、正确率与复习队列</text>
-    </view>
-    <text class="entry-arrow">→</text>
-  </button>
+    <text class="profile-footer">拾词 · 本地学习档案</text>
+  </block>
 </view>
-

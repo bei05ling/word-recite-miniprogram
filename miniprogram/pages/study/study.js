@@ -9,6 +9,7 @@ Page({
     currentIndex: 0,
     currentMastered: false,
     learnedIds: [],
+    studiedIds: [],
     page: 0,
     hasMore: true,
   },
@@ -18,8 +19,17 @@ Page({
     const progress = progressService.loadProgress(wordbookId);
     this.setData({
       learnedIds: progress.learnedWordIds || [],
+      studiedIds: progress.studiedWordIds || [],
     });
     await this.loadPage(0);
+  },
+
+  onHide() {
+    this.recordWordStudied(false);
+  },
+
+  onUnload() {
+    this.recordWordStudied(false);
   },
 
   async loadPage(page) {
@@ -53,6 +63,7 @@ Page({
   },
 
   async goNext() {
+    this.recordWordStudied();
     const nextIndex = this.data.currentIndex + 1;
     if (nextIndex >= this.data.words.length) {
       if (this.data.hasMore) {
@@ -98,6 +109,7 @@ Page({
     progressService.syncProgress(nextProgress).catch(() => {});
     this.setData({
       learnedIds: nextProgress.learnedWordIds,
+      studiedIds: nextProgress.studiedWordIds,
       currentMastered: true,
     });
     wx.showToast({ title: '已标记掌握', icon: 'success' });
@@ -107,7 +119,38 @@ Page({
     wx.showToast({ title: '发音加载失败', icon: 'none' });
   },
 
+  recordWordStudied(updateView = true) {
+    if (!this.data.currentWord) {
+      return;
+    }
+    const wordbookId = wordbookService.getCachedWordbookId();
+    const progress = progressService.loadProgress(wordbookId);
+    const todayStudied = progressService.getTodayStudiedIds(progress);
+    if (todayStudied.includes(this.data.currentWord.id)) {
+      return;
+    }
+    const nextProgress = progressService.markWordStudied(
+      progress,
+      this.data.currentWord.id
+    );
+    progressService.syncProgress(nextProgress).catch(() => {});
+    if (updateView) {
+      this.setData({ studiedIds: nextProgress.studiedWordIds });
+    }
+  },
+
+  openDetail() {
+    if (!this.data.currentWord) {
+      return;
+    }
+    this.recordWordStudied();
+    wx.navigateTo({
+      url: `/pages/word-detail/word-detail?bookId=${wordbookService.getCachedWordbookId()}&wordId=${this.data.currentWord.id}`,
+    });
+  },
+
   finish() {
+    this.recordWordStudied();
     wx.navigateBack({
       fail: () => wx.redirectTo({ url: '/pages/index/index' }),
     });

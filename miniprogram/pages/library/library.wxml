@@ -1,0 +1,73 @@
+<view class="page-shell library-page">
+  <view class="library-hero">
+    <view class="library-heading">
+      <text class="library-number">{{totalWords}}</text>
+      <view>
+        <view class="library-title">
+          <text class="title-line">把单词放回</text>
+          <text class="title-line">它发生的场景。</text>
+        </view>
+      </view>
+    </view>
+    <view class="library-summary">
+      <text>{{wordbooks.length}} 本主题词书</text>
+      <text>{{totalLearned}} 个词已经留下</text>
+    </view>
+    <button class="search-entry" bindtap="openSearch">
+      <text>查一个英文单词或中文意思</text>
+      <text class="search-entry-action">查词</text>
+    </button>
+  </view>
+
+  <view wx:if="{{loading}}" class="library-loading surface">正在整理词书...</view>
+
+  <block wx:else>
+    <button wx:if="{{dailyWord}}" class="daily-word" bindtap="openDailyWord">
+      <view class="daily-topline">
+        <text>今日词签</text>
+        <text>{{dailyBook.name}}</text>
+      </view>
+      <view class="daily-main">
+        <text class="daily-letter">{{dailyLetter}}</text>
+        <view class="daily-copy">
+          <text class="daily-word-text">{{dailyWord.word}}</text>
+          <text class="daily-phonetic">{{dailyWord.phonetic}}</text>
+          <text class="daily-meaning">{{dailyWord.meaning}}</text>
+        </view>
+      </view>
+      <text class="daily-action">打开完整词条 →</text>
+    </button>
+
+    <view class="library-section-heading">
+      <text class="section-title">按场景选书</text>
+      <text class="section-note">每本书保留独立进度</text>
+    </view>
+
+    <view class="shelf-list">
+      <button
+        wx:for="{{wordbooks}}"
+        wx:key="id"
+        class="shelf-row"
+        data-id="{{item.id}}"
+        bindtap="startBook"
+      >
+        <view class="shelf-index">{{index + 1}}</view>
+        <view class="shelf-copy">
+          <view class="shelf-title-row">
+            <text class="shelf-title">{{item.name}}</text>
+            <text class="shelf-level" style="color: {{item.accent}};">{{item.level}}</text>
+          </view>
+          <text class="shelf-subtitle">{{item.subtitle}}</text>
+          <text class="shelf-description">{{item.description}}</text>
+          <view class="shelf-progress-row">
+            <view class="shelf-progress-track">
+              <view class="shelf-progress-fill" style="width: {{item.progress}}%; background: {{item.accent}};"></view>
+            </view>
+            <text>{{item.learnedCount}} / {{item.totalWords}}</text>
+          </view>
+        </view>
+        <view class="shelf-action" style="background: {{item.accent}};">开始</view>
+      </button>
+    </view>
+  </block>
+</view>

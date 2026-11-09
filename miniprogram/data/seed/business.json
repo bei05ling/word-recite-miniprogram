@@ -1,0 +1,258 @@
+[
+  {
+    "id": "business-001",
+    "word": "agreement",
+    "phonetic": "/əˈɡriːmənt/",
+    "syllables": [
+      "a",
+      "gree",
+      "ment"
+    ],
+    "meaning": "n. 协议；一致",
+    "example": "Both teams reached an agreement after the meeting.",
+    "translation": "双方团队在会议后达成了协议。"
+  },
+  {
+    "id": "business-002",
+    "word": "budget",
+    "phonetic": "/ˈbʌdʒɪt/",
+    "syllables": [
+      "bud",
+      "get"
+    ],
+    "meaning": "n. 预算",
+    "example": "The project stayed within the annual budget.",
+    "translation": "项目控制在年度预算之内。"
+  },
+  {
+    "id": "business-003",
+    "word": "client",
+    "phonetic": "/ˈklaɪənt/",
+    "syllables": [
+      "cli",
+      "ent"
+    ],
+    "meaning": "n. 客户；委托人",
+    "example": "The client asked for a simpler proposal.",
+    "translation": "客户要求提供一份更简洁的方案。"
+  },
+  {
+    "id": "business-004",
+    "word": "contract",
+    "phonetic": "/ˈkɒntrækt/",
+    "syllables": [
+      "con",
+      "tract"
+    ],
+    "meaning": "n. 合同；v. 签约",
+    "example": "Read every clause before signing the contract.",
+    "translation": "签署合同前请阅读每一条款。"
+  },
+  {
+    "id": "business-005",
+    "word": "department",
+    "phonetic": "/dɪˈpɑːtmənt/",
+    "syllables": [
+      "de",
+      "part",
+      "ment"
+    ],
+    "meaning": "n. 部门",
+    "example": "The design department works closely with marketing.",
+    "translation": "设计部门与市场部门紧密合作。"
+  },
+  {
+    "id": "business-006",
+    "word": "employee",
+    "phonetic": "/ɪmˈplɔɪiː/",
+    "syllables": [
+      "em",
+      "ploy",
+      "ee"
+    ],
+    "meaning": "n. 员工；雇员",
+    "example": "Every employee receives a monthly summary.",
+    "translation": "每位员工都会收到月度总结。"
+  },
+  {
+    "id": "business-007",
+    "word": "enterprise",
+    "phonetic": "/ˈentəpraɪz/",
+    "syllables": [
+      "en",
+      "ter",
+      "prise"
+    ],
+    "meaning": "n. 企业；事业",
+    "example": "The enterprise plans to open two new offices.",
+    "translation": "这家企业计划开设两个新办公室。"
+  },
+  {
+    "id": "business-008",
+    "word": "finance",
+    "phonetic": "/ˈfaɪnæns/",
+    "syllables": [
+      "fi",
+      "nance"
+    ],
+    "meaning": "n. 财务；金融",
+    "example": "The finance team reviewed the forecast.",
+    "translation": "财务团队审查了预测。"
+  },
+  {
+    "id": "business-009",
+    "word": "investment",
+    "phonetic": "/ɪnˈvestmənt/",
+    "syllables": [
+      "in",
+      "vest",
+      "ment"
+    ],
+    "meaning": "n. 投资",
+    "example": "The new system is a long-term investment.",
+    "translation": "新系统是一项长期投资。"
+  },
+  {
+    "id": "business-010",
+    "word": "management",
+    "phonetic": "/ˈmænɪdʒmənt/",
+    "syllables": [
+      "man",
+      "age",
+      "ment"
+    ],
+    "meaning": "n. 管理；管理层",
+    "example": "Good management keeps the team aligned.",
+    "translation": "良好的管理能让团队目标一致。"
+  },
+  {
+    "id": "business-011",
+    "word": "marketing",
+    "phonetic": "/ˈmɑːkɪtɪŋ/",
+    "syllables": [
+      "mar",
+      "ket",
+      "ing"
+    ],
+    "meaning": "n. 市场营销",
+    "example": "The marketing plan focuses on repeat users.",
+    "translation": "营销计划聚焦于复购用户。"
+  },
+  {
+    "id": "business-012",
+    "word": "negotiate",
+    "phonetic": "/nɪˈɡəʊʃieɪt/",
+    "syllables": [
+      "ne",
+      "go",
+      "ti",
+      "ate"
+    ],
+    "meaning": "v. 谈判；协商",
+    "example": "We need to negotiate the delivery time.",
+    "translation": "我们需要协商交付时间。"
+  },
+  {
+    "id": "business-013",
+    "word": "objective",
+    "phonetic": "/əbˈdʒektɪv/",
+    "syllables": [
+      "ob",
+      "jec",
+      "tive"
+    ],
+    "meaning": "n. 目标；adj. 客观的",
+    "example": "The main objective is to reduce waiting time.",
+    "translation": "主要目标是减少等待时间。"
+  },
+  {
+    "id": "business-014",
+    "word": "partnership",
+    "phonetic": "/ˈpɑːtnəʃɪp/",
+    "syllables": [
+      "part",
+      "ner",
+      "ship"
+    ],
+    "meaning": "n. 合作关系；合伙企业",
+    "example": "The two companies formed a research partnership.",
+    "translation": "两家公司建立了研究合作关系。"
+  },
+  {
+    "id": "business-015",
+    "word": "profit",
+    "phonetic": "/ˈprɒfɪt/",
+    "syllables": [
+      "prof",
+      "it"
+    ],
+    "meaning": "n. 利润；v. 获益",
+    "example": "The product became profitable in its second year.",
+    "translation": "这个产品在第二年实现盈利。"
+  },
+  {
+    "id": "business-016",
+    "word": "proposal",
+    "phonetic": "/prəˈpəʊzl/",
+    "syllables": [
+      "pro",
+      "pos",
+      "al"
+    ],
+    "meaning": "n. 提案；建议",
+    "example": "Please send the revised proposal by Tuesday.",
+    "translation": "请在周二前发送修改后的提案。"
+  },
+  {
+    "id": "business-017",
+    "word": "recruitment",
+    "phonetic": "/rɪˈkruːtmənt/",
+    "syllables": [
+      "re",
+      "cruit",
+      "ment"
+    ],
+    "meaning": "n. 招聘；招募",
+    "example": "The recruitment process includes two interviews.",
+    "translation": "招聘流程包括两轮面试。"
+  },
+  {
+    "id": "business-018",
+    "word": "revenue",
+    "phonetic": "/ˈrevənjuː/",
+    "syllables": [
+      "rev",
+      "e",
+      "nue"
+    ],
+    "meaning": "n. 收入；营收",
+    "example": "Online sales now account for half of revenue.",
+    "translation": "线上销售现在占营收的一半。"
+  },
+  {
+    "id": "business-019",
+    "word": "strategy",
+    "phonetic": "/ˈstrætədʒi/",
+    "syllables": [
+      "strat",
+      "e",
+      "gy"
+    ],
+    "meaning": "n. 策略；战略",
+    "example": "The team agreed on a three-month strategy.",
+    "translation": "团队确定了为期三个月的策略。"
+  },
+  {
+    "id": "business-020",
+    "word": "supplier",
+    "phonetic": "/səˈplaɪə/",
+    "syllables": [
+      "sup",
+      "pli",
+      "er"
+    ],
+    "meaning": "n. 供应商",
+    "example": "The supplier confirmed the delivery date.",
+    "translation": "供应商确认了交付日期。"
+  }
+]

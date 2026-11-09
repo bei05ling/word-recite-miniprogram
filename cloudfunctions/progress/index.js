@@ -6,6 +6,16 @@ cloud.init({
 
 const db = cloud.database();
 
+function mergeDailyStudied(local = {}, remote = {}) {
+  const result = { ...local };
+  Object.keys(remote).forEach((date) => {
+    result[date] = Array.from(
+      new Set([...(result[date] || []), ...(remote[date] || [])])
+    );
+  });
+  return result;
+}
+
 function mergeProgress(local, remote) {
   if (!remote) {
     return local;
@@ -16,6 +26,13 @@ function mergeProgress(local, remote) {
     ...local,
     learnedWordIds: Array.from(
       new Set([...(local.learnedWordIds || []), ...(remote.learnedWordIds || [])])
+    ),
+    studiedWordIds: Array.from(
+      new Set([...(local.studiedWordIds || []), ...(remote.studiedWordIds || [])])
+    ),
+    dailyStudied: mergeDailyStudied(
+      local.dailyStudied || {},
+      remote.dailyStudied || {}
     ),
     studyDates: Array.from(
       new Set([...(local.studyDates || []), ...(remote.studyDates || [])])

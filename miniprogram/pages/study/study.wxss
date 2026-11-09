@@ -67,6 +67,13 @@
   font-size: 24rpx;
 }
 
+.detail-link {
+  padding: 18rpx 8rpx;
+  color: var(--green);
+  font-size: 22rpx;
+  font-weight: 600;
+}
+
 .nav-row {
   display: flex;
   margin-top: 24rpx;

@@ -1,13 +1,16 @@
 <view class="page-shell home">
   <view class="hero-header">
     <view>
-      <text class="eyebrow">DAILY PRACTICE · {{todayLabel}}</text>
+      <text class="date-stamp">{{todayLabel}}</text>
       <view class="page-title">
         <text class="title-line">把今天的词</text>
         <text class="title-line">留在脑子里。</text>
       </view>
     </view>
-    <button class="avatar-button" bindtap="openProfile">词</button>
+    <view class="hero-actions">
+      <button class="header-action" bindtap="openSearch">查词</button>
+      <button class="avatar-button" bindtap="openProfile" aria-label="打开个人中心">{{avatarText}}</button>
+    </view>
   </view>
 
   <view wx:if="{{loading}}" class="loading-card surface">正在整理今日计划...</view>
@@ -20,7 +23,7 @@
         <text class="book-subtitle">{{currentBook.subtitle}}</text>
         <view class="streak-pill">
           <text class="streak-dot"></text>
-          <text>已学习 {{streak}} 次</text>
+          <text>连续学习 {{streak}} 天</text>
         </view>
       </view>
       <progress-ring percent="{{percent}}" caption="今日计划" />
@@ -28,12 +31,12 @@
 
     <view class="metric-row">
       <view class="metric surface">
-        <text class="metric-value">{{learnedCount}}</text>
-        <text class="metric-label">已学单词</text>
+        <text class="metric-value">{{todayStudied}}</text>
+        <text class="metric-label">今日已学 / {{dailyGoal}}</text>
       </view>
       <view class="metric surface">
-        <text class="metric-value">{{dailyGoal}}</text>
-        <text class="metric-label">本词书总量</text>
+        <text class="metric-value">{{learnedCount}}</text>
+        <text class="metric-label">累计掌握</text>
       </view>
       <view class="metric metric-accent">
         <text class="metric-value">{{percent}}%</text>
@@ -42,25 +45,35 @@
     </view>
 
     <button class="primary-button start-button" bindtap="startStudy">
-      开始今日学习
+      {{startLabel}}
       <text class="button-arrow">→</text>
+    </button>
+
+    <button wx:if="{{dailyWord}}" class="daily-word-card" bindtap="openDailyWord">
+      <view class="daily-word-main">
+        <text class="daily-word-label">今日词签 · {{dailyBookName}}</text>
+        <text class="daily-word-word">{{dailyWord.word}}</text>
+        <text class="daily-word-meaning">{{dailyWord.meaning}}</text>
+      </view>
+      <text class="daily-word-action">看词条 →</text>
     </button>
 
     <view class="quick-grid">
       <button class="quick-card surface" bindtap="startQuiz">
-        <text class="quick-index">01</text>
         <text class="quick-title">拼写测试</text>
         <text class="quick-desc">即时判分，检验记忆</text>
       </button>
       <button class="quick-card surface" bindtap="openMistakes">
-        <text class="quick-index">02</text>
         <text class="quick-title">错词复习</text>
         <text class="quick-desc">按记忆曲线再次出现</text>
       </button>
-      <button class="quick-card surface wide" bindtap="openStats">
-        <view>
-          <text class="quick-index">03</text>
-          <text class="quick-title block">学习统计</text>
+      <button class="quick-card surface" bindtap="openLibrary">
+        <text class="quick-title">探索词书</text>
+        <text class="quick-desc">四个场景，换一种记忆方式</text>
+      </button>
+      <button class="quick-card surface stats-card" bindtap="openStats">
+        <view class="stats-card-copy">
+          <text class="quick-title">学习统计</text>
           <text class="quick-desc">正确率、打卡与学习量</text>
         </view>
         <view class="mini-chart">

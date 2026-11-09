@@ -1,4 +1,4 @@
-const { wordbooks, cet4: cet4Words } = require('../data/seed/index');
+const seed = require('../data/seed/index');
 const storage = require('../utils/storage');
 const cloud = require('./cloud');
 const { STORAGE_KEYS } = require('../utils/constants');
@@ -9,6 +9,21 @@ const CACHE_TTL = 30 * 60 * 1000;
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
+}
+
+function allLocalWords() {
+  return seed.wordbooks.reduce((rows, book) => {
+    const words = seed[book.id] || [];
+    return rows.concat(
+      words.map((word) => ({
+        ...word,
+        bookId: book.id,
+        bookName: book.name,
+        bookLevel: book.level,
+        accent: book.accent,
+      }))
+    );
+  }, []);
 }
 
 function pageCacheKey(wordbookId, page, pageSize) {
@@ -31,7 +46,7 @@ function writePageCache(wordbookId, page, pageSize, result) {
 }
 
 function getLocalPage(wordbookId, page, pageSize) {
-  const source = wordbookId === 'cet4' ? cet4Words : [];
+  const source = seed[wordbookId] || [];
   const start = page * pageSize;
   return {
     items: clone(source.slice(start, start + pageSize)),
@@ -52,7 +67,7 @@ async function getWordbooks() {
   } catch (error) {
     console.warn('云端词书不可用，使用本地词库', error);
   }
-  return clone(wordbooks);
+  return clone(seed.wordbooks);
 }
 
 async function getWords({
@@ -119,6 +134,74 @@ async function syncIncremental(wordbookId = 'cet4') {
   return result;
 }
 
+function getWordbookById(wordbookId) {
+  return clone(seed.wordbooks.find((book) => book.id === wordbookId) || null);
+}
+
+function getWordById(wordbookId, wordId) {
+  const source = seed[wordbookId] || [];
+  return clone(source.find((word) => word.id === wordId) || null);
+}
+
+function getRelatedWords(wordbookId, wordId, limit = 4) {
+  const source = seed[wordbookId] || [];
+  const index = source.findIndex((word) => word.id === wordId);
+  if (index < 0) {
+    return [];
+  }
+
+  return clone(
+    source
+      .filter((_, itemIndex) => itemIndex !== index)
+      .sort((left, right) => {
+        const leftDistance = Math.abs(source.indexOf(left) - index);
+        const rightDistance = Math.abs(source.indexOf(right) - index);
+        return leftDistance - rightDistance;
+      })
+      .slice(0, limit)
+  );
+}
+
+function searchWords(keyword = '', options = {}) {
+  const bookId = options.bookId || 'all';
+  const limit = options.limit || 30;
+  const normalized = String(keyword).trim().toLowerCase();
+  const rows = allLocalWords().filter((word) => {
+    if (bookId !== 'all' && word.bookId !== bookId) {
+      return false;
+    }
+    if (!normalized) {
+      return true;
+    }
+    return [
+      word.word,
+      word.meaning,
+      word.translation,
+      word.bookName,
+    ].some((value) => String(value).toLowerCase().includes(normalized));
+  });
+
+  return clone(rows.slice(0, limit));
+}
+
+function getDailyWord(date = new Date()) {
+  const rows = allLocalWords();
+  if (!rows.length) {
+    return null;
+  }
+  const start = new Date('2025-01-01T12:00:00').getTime();
+  const today = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate(),
+    12,
+    0,
+    0
+  ).getTime();
+  const offset = Math.max(0, Math.floor((today - start) / 86400000));
+  return clone(rows[offset % rows.length]);
+}
+
 module.exports = {
   PAGE_SIZE,
   getWordbooks,
@@ -127,5 +210,10 @@ module.exports = {
   getCachedWordbookId,
   setCachedWordbookId,
   syncIncremental,
+  getWordbookById,
+  getWordById,
+  getRelatedWords,
+  searchWords,
+  getDailyWord,
 };
 

@@ -1,44 +1,465 @@
-.section-head {
+.profile-page {
+  padding-bottom: 80rpx;
+}
+
+.profile-hero {
+  padding: 38rpx 32rpx 30rpx;
+  border-radius: 36rpx;
+  color: #fffdf7;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(232, 121, 94, 0.32), transparent 34%),
+    radial-gradient(circle at 10% 110%, rgba(215, 168, 68, 0.18), transparent 36%),
+    #244d3c;
+  box-shadow: 0 24rpx 60rpx rgba(35, 72, 55, 0.2);
+}
+
+.profile-top {
   display: flex;
-  margin-top: 54rpx;
+  align-items: flex-start;
+  gap: 24rpx;
+}
+
+.avatar {
+  display: flex;
+  width: 112rpx;
+  height: 112rpx;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid rgba(255, 255, 255, 0.24);
+  border-radius: 32rpx;
+  color: #244d3c;
+  background: #f5efe2;
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 50rpx;
+  font-weight: 700;
+}
+
+.identity {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 44rpx;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.profile-note {
+  margin-top: 10rpx;
+  color: rgba(255, 253, 247, 0.76);
+  font-size: 22rpx;
+  line-height: 1.55;
+}
+
+.identity-meta {
+  display: flex;
+  margin-top: 18rpx;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12rpx;
+  color: rgba(255, 253, 247, 0.74);
+  font-size: 20rpx;
+}
+
+.identity-chip {
+  padding: 7rpx 14rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.18);
+  border-radius: 999rpx;
+  color: #fffdf7;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.edit-button {
+  width: 84rpx;
+  height: 58rpx;
+  flex: none;
+  border: 1rpx solid rgba(255, 255, 255, 0.2);
+  border-radius: 18rpx;
+  color: rgba(255, 253, 247, 0.86);
+  font-size: 21rpx;
+}
+
+.profile-editor {
+  display: flex;
+  margin-top: 28rpx;
+  padding-top: 24rpx;
+  flex-direction: column;
+  gap: 16rpx;
+  border-top: 1rpx solid rgba(255, 255, 255, 0.14);
+}
+
+.editor-field {
+  display: flex;
+  min-height: 76rpx;
+  padding: 0 20rpx;
+  align-items: center;
+  gap: 18rpx;
+  border-radius: 20rpx;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.editor-label {
+  width: 130rpx;
+  flex: none;
+  color: rgba(255, 253, 247, 0.6);
+  font-size: 21rpx;
+}
+
+.editor-input {
+  height: 76rpx;
+  flex: 1;
+  color: #fffdf7;
+  font-size: 25rpx;
+}
+
+.save-profile {
+  display: flex;
+  height: 72rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+  color: #244d3c;
+  background: #f5efe2;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.hero-stats {
+  display: flex;
+  margin-top: 34rpx;
+  padding-top: 28rpx;
+  align-items: stretch;
+  border-top: 1rpx solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-stat {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.hero-value {
+  font-family: Georgia, serif;
+  font-size: 44rpx;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero-unit {
+  margin-left: 3rpx;
+  font-size: 21rpx;
+}
+
+.hero-label {
+  margin-top: 10rpx;
+  color: rgba(255, 253, 247, 0.72);
+  font-size: 19rpx;
+}
+
+.hero-divider {
+  width: 1rpx;
+  margin: 4rpx 24rpx;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.profile-loading {
+  margin-top: 24rpx;
+  padding: 90rpx 32rpx;
+  color: var(--muted);
+  text-align: center;
+}
+
+.section-heading {
+  display: flex;
+  margin-top: 44rpx;
   align-items: baseline;
   justify-content: space-between;
 }
 
-.section-count {
-  color: var(--muted);
-  font-size: 22rpx;
+.section-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 34rpx;
+  font-weight: 700;
 }
 
-.book-list {
+.section-note {
+  color: var(--muted);
+  font-size: 20rpx;
+}
+
+.section-link {
+  padding: 8rpx 0;
+  color: var(--green);
+  font-size: 20rpx;
+  font-weight: 600;
+}
+
+.archive-panel {
+  margin-top: 18rpx;
+  padding: 30rpx;
+}
+
+.archive-book {
   display: flex;
-  margin-top: 20rpx;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.archive-label {
+  display: block;
+  color: var(--coral);
+  font-size: 19rpx;
+  font-weight: 600;
+}
+
+.archive-name {
+  display: block;
+  margin-top: 10rpx;
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.archive-detail {
+  display: block;
+  margin-top: 9rpx;
+  color: var(--muted);
+  font-size: 21rpx;
+}
+
+.archive-percent {
+  color: var(--green);
+  font-family: Georgia, serif;
+  font-size: 46rpx;
+  font-weight: 700;
+}
+
+.progress-track,
+.book-progress-track {
+  overflow: hidden;
+  border-radius: 999rpx;
+  background: #e7e1d7;
+}
+
+.progress-track {
+  height: 9rpx;
+  margin-top: 24rpx;
+}
+
+.progress-fill,
+.book-progress-fill {
+  height: 100%;
+  border-radius: 999rpx;
+  transition: width 220ms ease-out;
+}
+
+.archive-actions {
+  display: grid;
+  margin-top: 26rpx;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12rpx;
+}
+
+.archive-action {
+  display: flex;
+  min-height: 126rpx;
+  padding: 20rpx 16rpx;
   flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  border-radius: 22rpx;
+  color: var(--ink);
+  background: #f1eee5;
+  text-align: left;
+}
+
+.archive-action.primary {
+  color: #fff;
+  background: var(--green);
+}
+
+.action-title {
+  font-size: 22rpx;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.action-note {
+  margin-top: 8rpx;
+  color: var(--muted);
+  font-size: 17rpx;
+  line-height: 1.4;
+}
+
+.archive-action.primary .action-note {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.stats-link {
+  display: flex;
+  width: 100%;
+  margin-top: 20rpx;
+  padding-top: 22rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid rgba(31, 42, 36, 0.08);
+  color: var(--green);
+  font-size: 23rpx;
+  font-weight: 600;
+}
+
+.profile-tools {
+  display: grid;
+  margin-top: 16rpx;
+  grid-template-columns: 1fr 1fr;
   gap: 14rpx;
+}
+
+.profile-tool {
+  display: flex;
+  min-height: 116rpx;
+  padding: 22rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.tool-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+
+.tool-note {
+  margin-top: 7rpx;
+  color: var(--muted);
+  font-size: 18rpx;
+}
+
+.link-arrow {
+  color: var(--coral);
+  font-size: 30rpx;
+}
+
+.achievement-heading {
+  margin-top: 44rpx;
+}
+
+.achievement-scroll {
+  width: calc(100% + 64rpx);
+  margin: 18rpx -32rpx 0;
+  white-space: nowrap;
+}
+
+.achievement-list {
+  display: inline-flex;
+  padding: 0 32rpx;
+  gap: 14rpx;
+}
+
+.achievement-item {
+  display: inline-flex;
+  width: 228rpx;
+  min-height: 238rpx;
+  padding: 24rpx 20rpx;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1rpx solid rgba(31, 42, 36, 0.08);
+  border-radius: 26rpx;
+  color: var(--muted);
+  background: #eeebe3;
+  vertical-align: top;
+}
+
+.achievement-item.unlocked {
+  color: var(--ink);
+  background: #fffdf7;
+  box-shadow: 0 14rpx 34rpx rgba(54, 66, 58, 0.07);
+}
+
+.achievement-mark {
+  display: flex;
+  width: 58rpx;
+  height: 58rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18rpx;
+  color: #fffdf7;
+  background: #a2aaa5;
+  font-family: "Songti SC", Georgia, serif;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+
+.unlocked .achievement-mark {
+  background: var(--green);
+}
+
+.achievement-title {
+  margin-top: 18rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.achievement-desc {
+  margin-top: 8rpx;
+  font-size: 18rpx;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.achievement-progress {
+  margin-top: auto;
+  padding-top: 18rpx;
+  color: var(--coral);
+  font-size: 18rpx;
+  font-weight: 600;
+}
+
+.library-panel {
+  margin-top: 18rpx;
+  padding: 0 28rpx;
 }
 
 .book-row {
   display: flex;
   width: 100%;
-  padding: 0;
-  overflow: hidden;
-  align-items: stretch;
+  min-height: 154rpx;
+  padding: 24rpx 0;
+  align-items: flex-start;
+  gap: 18rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid rgba(31, 42, 36, 0.08);
   text-align: left;
 }
 
-.book-row.selected {
-  box-shadow: 0 0 0 2rpx rgba(47, 107, 79, 0.25), 0 18rpx 50rpx rgba(54, 66, 58, 0.08);
+.book-row:last-child {
+  border-bottom: 0;
 }
 
-.book-accent {
-  width: 10rpx;
+.book-row.selected {
+  color: var(--green);
+}
+
+.book-swatch {
+  width: 14rpx;
+  height: 74rpx;
+  margin-top: 4rpx;
   flex: none;
+  border-radius: 999rpx;
 }
 
 .book-copy {
   display: flex;
   min-width: 0;
-  padding: 30rpx 26rpx;
   flex: 1;
   flex-direction: column;
 }
@@ -46,52 +467,60 @@
 .book-title-row {
   display: flex;
   align-items: center;
-  gap: 14rpx;
+  gap: 10rpx;
 }
 
 .book-title {
+  color: var(--ink);
   font-family: Georgia, "Songti SC", serif;
-  font-size: 32rpx;
+  font-size: 27rpx;
   font-weight: 700;
 }
 
-.book-tag {
-  padding: 5rpx 10rpx;
+.book-level {
+  padding: 4rpx 9rpx;
   border-radius: 8rpx;
   color: var(--green);
   background: var(--green-soft);
-  font-size: 17rpx;
+  font-size: 15rpx;
   font-weight: 700;
 }
 
 .book-desc {
-  margin-top: 12rpx;
+  margin-top: 8rpx;
+  padding-right: 20rpx;
   color: var(--muted);
-  font-size: 22rpx;
-  line-height: 1.5;
+  font-size: 18rpx;
+  line-height: 1.45;
 }
 
-.book-total {
-  margin-top: 16rpx;
+.book-progress-row {
+  display: flex;
+  margin-top: 14rpx;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.book-progress-track {
+  height: 6rpx;
+  flex: 1;
+}
+
+.book-progress-text {
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-size: 17rpx;
+}
+
+.book-state {
+  padding-top: 8rpx;
   color: var(--coral);
   font-size: 19rpx;
+  font-weight: 600;
 }
 
-.book-check {
-  display: flex;
-  width: 82rpx;
-  align-items: center;
-  justify-content: center;
-  color: var(--green);
-  font-size: 32rpx;
-}
-
-.settings-head {
-  margin-top: 52rpx;
-}
-
-.settings-card {
-  margin-top: 20rpx;
+.settings-panel {
+  margin-top: 18rpx;
   padding: 0 28rpx;
 }
 
@@ -100,19 +529,26 @@
   min-height: 116rpx;
   align-items: center;
   justify-content: space-between;
+  gap: 24rpx;
+}
+
+.setting-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
 }
 
 .setting-title {
-  display: block;
-  font-size: 27rpx;
+  font-size: 25rpx;
   font-weight: 600;
 }
 
 .setting-desc {
-  display: block;
-  margin-top: 8rpx;
+  margin-top: 7rpx;
   color: var(--muted);
-  font-size: 21rpx;
+  font-size: 19rpx;
+  line-height: 1.45;
 }
 
 .setting-divider {
@@ -121,27 +557,21 @@
 }
 
 .picker-value {
-  padding: 14rpx 22rpx;
+  min-width: 108rpx;
+  padding: 13rpx 18rpx;
   border-radius: 18rpx;
   color: var(--green);
   background: var(--green-soft);
-  font-size: 24rpx;
+  font-size: 22rpx;
   font-weight: 600;
+  text-align: center;
 }
 
-.stats-entry {
-  display: flex;
-  width: 100%;
-  margin-top: 18rpx;
-  padding: 28rpx;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  text-align: left;
+.profile-footer {
+  display: block;
+  margin-top: 50rpx;
+  color: var(--muted);
+  font-size: 18rpx;
+  letter-spacing: 2rpx;
+  text-align: center;
 }
-
-.entry-arrow {
-  color: var(--coral);
-  font-size: 34rpx;
-}
-

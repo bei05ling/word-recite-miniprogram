@@ -2,20 +2,37 @@
   {
     "id": "cet4",
     "name": "大学英语四级",
-    "subtitle": "高频核心词汇",
-    "description": "从阅读与听力高频词开始，适合每天 20 分钟的学习节奏。",
+    "subtitle": "高频核心 · 40 词",
+    "description": "从阅读、听力和写作的高频词开始，适合作为每日学习主线。",
     "level": "CET-4",
-    "totalWords": 10,
+    "totalWords": 40,
     "accent": "#2f6b4f"
   },
   {
     "id": "campus",
     "name": "校园生活",
-    "subtitle": "场景主题词汇",
-    "description": "围绕课堂、社团与日常生活组织的一组轻量词书。",
+    "subtitle": "课堂与日常 · 20 词",
+    "description": "覆盖课堂、宿舍、社团和校园服务，适合场景联想记忆。",
     "level": "A2",
-    "totalWords": 0,
+    "totalWords": 20,
     "accent": "#e8795e"
+  },
+  {
+    "id": "travel",
+    "name": "旅行英语",
+    "subtitle": "出发与抵达 · 20 词",
+    "description": "从订票、入境到城市漫游，集中掌握出行中的高频表达。",
+    "level": "A2-B1",
+    "totalWords": 20,
+    "accent": "#d7a844"
+  },
+  {
+    "id": "business",
+    "name": "职场沟通",
+    "subtitle": "协作与决策 · 20 词",
+    "description": "围绕会议、合同和项目协作整理的一组职场基础词汇。",
+    "level": "B1",
+    "totalWords": 20,
+    "accent": "#315c73"
   }
 ]
-

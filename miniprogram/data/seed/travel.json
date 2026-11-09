@@ -1,0 +1,255 @@
+[
+  {
+    "id": "travel-001",
+    "word": "accommodation",
+    "phonetic": "/əˌkɒməˈdeɪʃn/",
+    "syllables": [
+      "ac",
+      "com",
+      "mo",
+      "da",
+      "tion"
+    ],
+    "meaning": "n. 住宿；住处",
+    "example": "We booked accommodation near the old town.",
+    "translation": "我们在老城附近订了住处。"
+  },
+  {
+    "id": "travel-002",
+    "word": "baggage",
+    "phonetic": "/ˈbæɡɪdʒ/",
+    "syllables": [
+      "bag",
+      "gage"
+    ],
+    "meaning": "n. 行李",
+    "example": "Please keep your baggage with you at all times.",
+    "translation": "请随时看管好行李。"
+  },
+  {
+    "id": "travel-003",
+    "word": "boarding",
+    "phonetic": "/ˈbɔːdɪŋ/",
+    "syllables": [
+      "board",
+      "ing"
+    ],
+    "meaning": "n. 登机；上车",
+    "example": "Boarding begins twenty minutes before departure.",
+    "translation": "登机在起飞前二十分钟开始。"
+  },
+  {
+    "id": "travel-004",
+    "word": "booking",
+    "phonetic": "/ˈbʊkɪŋ/",
+    "syllables": [
+      "book",
+      "ing"
+    ],
+    "meaning": "n. 预订",
+    "example": "Keep a copy of your hotel booking.",
+    "translation": "请保留酒店预订的副本。"
+  },
+  {
+    "id": "travel-005",
+    "word": "currency",
+    "phonetic": "/ˈkʌrənsi/",
+    "syllables": [
+      "cur",
+      "ren",
+      "cy"
+    ],
+    "meaning": "n. 货币",
+    "example": "You can exchange currency at the airport.",
+    "translation": "你可以在机场兑换货币。"
+  },
+  {
+    "id": "travel-006",
+    "word": "customs",
+    "phonetic": "/ˈkʌstəmz/",
+    "syllables": [
+      "cus",
+      "toms"
+    ],
+    "meaning": "n. 海关；关税",
+    "example": "We passed through customs in ten minutes.",
+    "translation": "我们十分钟就通过了海关。"
+  },
+  {
+    "id": "travel-007",
+    "word": "destination",
+    "phonetic": "/ˌdestɪˈneɪʃn/",
+    "syllables": [
+      "des",
+      "ti",
+      "na",
+      "tion"
+    ],
+    "meaning": "n. 目的地",
+    "example": "The coastal town is a popular summer destination.",
+    "translation": "这座海滨小镇是热门避暑目的地。"
+  },
+  {
+    "id": "travel-008",
+    "word": "embassy",
+    "phonetic": "/ˈembəsi/",
+    "syllables": [
+      "em",
+      "bas",
+      "sy"
+    ],
+    "meaning": "n. 大使馆",
+    "example": "Contact your embassy if your passport is lost.",
+    "translation": "如果护照丢失，请联系大使馆。"
+  },
+  {
+    "id": "travel-009",
+    "word": "ferry",
+    "phonetic": "/ˈferi/",
+    "syllables": [
+      "fer",
+      "ry"
+    ],
+    "meaning": "n. 渡船；v. 渡运",
+    "example": "The ferry crosses the river every hour.",
+    "translation": "渡船每小时过河一次。"
+  },
+  {
+    "id": "travel-010",
+    "word": "itinerary",
+    "phonetic": "/aɪˈtɪnərəri/",
+    "syllables": [
+      "i",
+      "tin",
+      "er",
+      "ar",
+      "y"
+    ],
+    "meaning": "n. 行程表；旅行计划",
+    "example": "Our itinerary includes three cities in one week.",
+    "translation": "我们的行程一周内包含三座城市。"
+  },
+  {
+    "id": "travel-011",
+    "word": "luggage",
+    "phonetic": "/ˈlʌɡɪdʒ/",
+    "syllables": [
+      "lug",
+      "gage"
+    ],
+    "meaning": "n. 行李",
+    "example": "The luggage arrived on a later flight.",
+    "translation": "行李搭乘了后面的航班到达。"
+  },
+  {
+    "id": "travel-012",
+    "word": "passport",
+    "phonetic": "/ˈpɑːspɔːt/",
+    "syllables": [
+      "pass",
+      "port"
+    ],
+    "meaning": "n. 护照",
+    "example": "Check that your passport has not expired.",
+    "translation": "检查你的护照是否过期。"
+  },
+  {
+    "id": "travel-013",
+    "word": "platform",
+    "phonetic": "/ˈplætfɔːm/",
+    "syllables": [
+      "plat",
+      "form"
+    ],
+    "meaning": "n. 站台；平台",
+    "example": "The train leaves from platform six.",
+    "translation": "火车从六号站台出发。"
+  },
+  {
+    "id": "travel-014",
+    "word": "reservation",
+    "phonetic": "/ˌrezəˈveɪʃn/",
+    "syllables": [
+      "res",
+      "er",
+      "va",
+      "tion"
+    ],
+    "meaning": "n. 预订；保留",
+    "example": "I made a reservation for two people.",
+    "translation": "我预订了两个人的位置。"
+  },
+  {
+    "id": "travel-015",
+    "word": "route",
+    "phonetic": "/ruːt/",
+    "syllables": [
+      "route"
+    ],
+    "meaning": "n. 路线；路径",
+    "example": "This route passes through the mountains.",
+    "translation": "这条路线穿过山区。"
+  },
+  {
+    "id": "travel-016",
+    "word": "sightseeing",
+    "phonetic": "/ˈsaɪtsiːɪŋ/",
+    "syllables": [
+      "sight",
+      "see",
+      "ing"
+    ],
+    "meaning": "n. 观光；游览",
+    "example": "We spent the afternoon sightseeing.",
+    "translation": "我们下午去观光了。"
+  },
+  {
+    "id": "travel-017",
+    "word": "souvenir",
+    "phonetic": "/ˌsuːvəˈnɪə/",
+    "syllables": [
+      "sou",
+      "ve",
+      "nir"
+    ],
+    "meaning": "n. 纪念品",
+    "example": "She bought a small souvenir for her family.",
+    "translation": "她给家人买了一个小纪念品。"
+  },
+  {
+    "id": "travel-018",
+    "word": "transfer",
+    "phonetic": "/ˈtrænsfɜː/",
+    "syllables": [
+      "trans",
+      "fer"
+    ],
+    "meaning": "n. 换乘；转移；v. 转乘",
+    "example": "The airport transfer takes about thirty minutes.",
+    "translation": "机场接送大约需要三十分钟。"
+  },
+  {
+    "id": "travel-019",
+    "word": "visa",
+    "phonetic": "/ˈviːzə/",
+    "syllables": [
+      "vi",
+      "sa"
+    ],
+    "meaning": "n. 签证",
+    "example": "The visa allows a stay of sixty days.",
+    "translation": "该签证允许停留六十天。"
+  },
+  {
+    "id": "travel-020",
+    "word": "voyage",
+    "phonetic": "/ˈvɔɪɪdʒ/",
+    "syllables": [
+      "voy",
+      "age"
+    ],
+    "meaning": "n. 航行；旅行",
+    "example": "The voyage across the sea took three days.",
+    "translation": "这次海上航行用了三天。"
+  }
+]

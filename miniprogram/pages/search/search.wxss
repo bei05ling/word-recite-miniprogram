@@ -1,0 +1,168 @@
+.search-page {
+  padding-bottom: 70rpx;
+}
+
+.search-heading {
+  padding-top: 12rpx;
+}
+
+.search-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 50rpx;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.title-line {
+  display: block;
+}
+
+.search-subtitle {
+  display: block;
+  margin-top: 14rpx;
+  color: var(--muted);
+  font-size: 22rpx;
+}
+
+.search-box {
+  display: flex;
+  min-height: 92rpx;
+  margin-top: 34rpx;
+  padding: 0 24rpx;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.search-input {
+  height: 92rpx;
+  flex: 1;
+  color: var(--ink);
+  font-size: 27rpx;
+}
+
+.clear-button {
+  padding: 14rpx 10rpx;
+  color: var(--coral);
+  font-size: 21rpx;
+}
+
+.search-count {
+  min-width: 48rpx;
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-size: 24rpx;
+  text-align: right;
+}
+
+.filter-scroll {
+  width: calc(100% + 64rpx);
+  margin: 22rpx -32rpx 0;
+  white-space: nowrap;
+}
+
+.filter-row {
+  display: inline-flex;
+  padding: 0 32rpx;
+  gap: 10rpx;
+}
+
+.filter-chip {
+  padding: 15rpx 24rpx;
+  border: 1rpx solid rgba(31, 42, 36, 0.1);
+  border-radius: 999rpx;
+  color: var(--muted);
+  background: #f1eee5;
+  font-size: 21rpx;
+}
+
+.filter-chip.active {
+  border-color: var(--green);
+  color: #fff;
+  background: var(--green);
+}
+
+.result-heading {
+  display: flex;
+  margin-top: 38rpx;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.result-count {
+  color: var(--muted);
+  font-size: 19rpx;
+}
+
+.result-list {
+  margin-top: 10rpx;
+}
+
+.result-row {
+  display: flex;
+  width: 100%;
+  padding: 25rpx 0;
+  align-items: center;
+  gap: 18rpx;
+  border-bottom: 1rpx solid rgba(31, 42, 36, 0.09);
+  text-align: left;
+}
+
+.result-row:last-child {
+  border-bottom: 0;
+}
+
+.result-main {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.result-word-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14rpx;
+}
+
+.result-word {
+  color: var(--ink);
+  font-family: Georgia, serif;
+  font-size: 31rpx;
+  font-weight: 700;
+}
+
+.result-phonetic {
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-size: 19rpx;
+}
+
+.result-meaning {
+  margin-top: 8rpx;
+  color: var(--ink);
+  font-size: 22rpx;
+  line-height: 1.45;
+}
+
+.result-meta {
+  display: flex;
+  margin-top: 11rpx;
+  gap: 14rpx;
+  color: var(--muted);
+  font-size: 17rpx;
+}
+
+.result-book {
+  font-weight: 600;
+}
+
+.result-arrow {
+  color: var(--coral);
+  font-size: 28rpx;
+}

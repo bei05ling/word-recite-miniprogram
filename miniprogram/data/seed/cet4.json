@@ -3,7 +3,11 @@
     "id": "cet4-001",
     "word": "abandon",
     "phonetic": "/əˈbændən/",
-    "syllables": ["a", "ban", "don"],
+    "syllables": [
+      "a",
+      "ban",
+      "don"
+    ],
     "meaning": "v. 放弃；抛弃",
     "example": "They had to abandon the plan because of the storm.",
     "translation": "因为暴风雨，他们不得不放弃计划。"
@@ -12,7 +16,11 @@
     "id": "cet4-002",
     "word": "benefit",
     "phonetic": "/ˈbenɪfɪt/",
-    "syllables": ["ben", "e", "fit"],
+    "syllables": [
+      "ben",
+      "e",
+      "fit"
+    ],
     "meaning": "n. 益处；v. 受益",
     "example": "Regular reading can benefit your vocabulary.",
     "translation": "经常阅读有助于扩大词汇量。"
@@ -21,7 +29,12 @@
     "id": "cet4-003",
     "word": "capacity",
     "phonetic": "/kəˈpæsəti/",
-    "syllables": ["ca", "pac", "i", "ty"],
+    "syllables": [
+      "ca",
+      "pac",
+      "i",
+      "ty"
+    ],
     "meaning": "n. 能力；容量",
     "example": "The hall has a capacity of five hundred people.",
     "translation": "这个大厅可容纳五百人。"
@@ -30,7 +43,11 @@
     "id": "cet4-004",
     "word": "delicate",
     "phonetic": "/ˈdelɪkət/",
-    "syllables": ["del", "i", "cate"],
+    "syllables": [
+      "del",
+      "i",
+      "cate"
+    ],
     "meaning": "adj. 精致的；微妙的",
     "example": "She handled the delicate situation with care.",
     "translation": "她谨慎地处理了这个微妙的局面。"
@@ -39,7 +56,11 @@
     "id": "cet4-005",
     "word": "efficient",
     "phonetic": "/ɪˈfɪʃnt/",
-    "syllables": ["ef", "fi", "cient"],
+    "syllables": [
+      "ef",
+      "fi",
+      "cient"
+    ],
     "meaning": "adj. 高效的；有效率的",
     "example": "The new process is more efficient than the old one.",
     "translation": "新流程比旧流程更高效。"
@@ -48,7 +69,10 @@
     "id": "cet4-006",
     "word": "frequent",
     "phonetic": "/ˈfriːkwənt/",
-    "syllables": ["fre", "quent"],
+    "syllables": [
+      "fre",
+      "quent"
+    ],
     "meaning": "adj. 频繁的；经常发生的",
     "example": "Frequent review helps move words into long-term memory.",
     "translation": "频繁复习有助于把单词转为长期记忆。"
@@ -57,7 +81,11 @@
     "id": "cet4-007",
     "word": "generate",
     "phonetic": "/ˈdʒenəreɪt/",
-    "syllables": ["gen", "er", "ate"],
+    "syllables": [
+      "gen",
+      "er",
+      "ate"
+    ],
     "meaning": "v. 产生；生成",
     "example": "The app can generate a new quiz every day.",
     "translation": "这个应用每天都能生成一份新测试。"
@@ -66,7 +94,11 @@
     "id": "cet4-008",
     "word": "hesitate",
     "phonetic": "/ˈhezɪteɪt/",
-    "syllables": ["hes", "i", "tate"],
+    "syllables": [
+      "hes",
+      "i",
+      "tate"
+    ],
     "meaning": "v. 犹豫；迟疑",
     "example": "Do not hesitate to ask questions in class.",
     "translation": "课堂上不要犹豫，有问题就问。"
@@ -75,7 +107,12 @@
     "id": "cet4-009",
     "word": "identify",
     "phonetic": "/aɪˈdentɪfaɪ/",
-    "syllables": ["i", "den", "ti", "fy"],
+    "syllables": [
+      "i",
+      "den",
+      "ti",
+      "fy"
+    ],
     "meaning": "v. 识别；确认",
     "example": "Can you identify the main idea of the passage?",
     "translation": "你能找出这篇文章的主旨吗？"
@@ -84,10 +121,390 @@
     "id": "cet4-010",
     "word": "maintain",
     "phonetic": "/meɪnˈteɪn/",
-    "syllables": ["main", "tain"],
+    "syllables": [
+      "main",
+      "tain"
+    ],
     "meaning": "v. 维持；坚持",
     "example": "A short daily habit is easier to maintain.",
     "translation": "每天坚持一个短习惯会更容易。"
+  },
+  {
+    "id": "cet4-011",
+    "word": "adapt",
+    "phonetic": "/əˈdæpt/",
+    "syllables": [
+      "a",
+      "dapt"
+    ],
+    "meaning": "v. 适应；改编",
+    "example": "Learners adapt quickly to a steady routine.",
+    "translation": "学习者能很快适应稳定的节奏。"
+  },
+  {
+    "id": "cet4-012",
+    "word": "assume",
+    "phonetic": "/əˈsjuːm/",
+    "syllables": [
+      "as",
+      "sume"
+    ],
+    "meaning": "v. 假定；承担",
+    "example": "We should not assume the answer is obvious.",
+    "translation": "我们不应假设答案显而易见。"
+  },
+  {
+    "id": "cet4-013",
+    "word": "aware",
+    "phonetic": "/əˈweə/",
+    "syllables": [
+      "a",
+      "ware"
+    ],
+    "meaning": "adj. 意识到的；了解的",
+    "example": "Be aware of the difference between similar words.",
+    "translation": "要留意相似单词之间的区别。"
+  },
+  {
+    "id": "cet4-014",
+    "word": "complex",
+    "phonetic": "/ˈkɒmpleks/",
+    "syllables": [
+      "com",
+      "plex"
+    ],
+    "meaning": "adj. 复杂的；n. 综合体",
+    "example": "The problem looks complex at first glance.",
+    "translation": "这个问题乍看之下很复杂。"
+  },
+  {
+    "id": "cet4-015",
+    "word": "concentrate",
+    "phonetic": "/ˈkɒnsntreɪt/",
+    "syllables": [
+      "con",
+      "cen",
+      "trate"
+    ],
+    "meaning": "v. 集中；专注",
+    "example": "Concentrate on one task before moving to the next.",
+    "translation": "先专注完成一项任务，再进行下一项。"
+  },
+  {
+    "id": "cet4-016",
+    "word": "contribute",
+    "phonetic": "/kənˈtrɪbjuːt/",
+    "syllables": [
+      "con",
+      "trib",
+      "ute"
+    ],
+    "meaning": "v. 贡献；促成",
+    "example": "Small habits contribute to long-term progress.",
+    "translation": "小习惯会促成长期进步。"
+  },
+  {
+    "id": "cet4-017",
+    "word": "decline",
+    "phonetic": "/dɪˈklaɪn/",
+    "syllables": [
+      "de",
+      "cline"
+    ],
+    "meaning": "v. 下降；拒绝",
+    "example": "The number of errors began to decline.",
+    "translation": "错误数量开始下降。"
+  },
+  {
+    "id": "cet4-018",
+    "word": "demonstrate",
+    "phonetic": "/ˈdemənstreɪt/",
+    "syllables": [
+      "dem",
+      "on",
+      "strate"
+    ],
+    "meaning": "v. 证明；演示",
+    "example": "The results demonstrate the value of review.",
+    "translation": "结果证明了复习的价值。"
+  },
+  {
+    "id": "cet4-019",
+    "word": "determine",
+    "phonetic": "/dɪˈtɜːmɪn/",
+    "syllables": [
+      "de",
+      "ter",
+      "mine"
+    ],
+    "meaning": "v. 决定；确定",
+    "example": "Your daily effort determines the final result.",
+    "translation": "每天的努力决定最终结果。"
+  },
+  {
+    "id": "cet4-020",
+    "word": "establish",
+    "phonetic": "/ɪˈstæblɪʃ/",
+    "syllables": [
+      "es",
+      "tab",
+      "lish"
+    ],
+    "meaning": "v. 建立；确立",
+    "example": "It takes time to establish a new habit.",
+    "translation": "建立新习惯需要时间。"
+  },
+  {
+    "id": "cet4-021",
+    "word": "eventually",
+    "phonetic": "/ɪˈventʃuəli/",
+    "syllables": [
+      "e",
+      "ven",
+      "tu",
+      "al",
+      "ly"
+    ],
+    "meaning": "adv. 最终；终于",
+    "example": "The difficult words eventually became familiar.",
+    "translation": "那些难词最终变得熟悉了。"
+  },
+  {
+    "id": "cet4-022",
+    "word": "evidence",
+    "phonetic": "/ˈevɪdəns/",
+    "syllables": [
+      "ev",
+      "i",
+      "dence"
+    ],
+    "meaning": "n. 证据；迹象",
+    "example": "There is clear evidence of steady improvement.",
+    "translation": "有明显迹象表明学习在稳定进步。"
+  },
+  {
+    "id": "cet4-023",
+    "word": "expand",
+    "phonetic": "/ɪkˈspænd/",
+    "syllables": [
+      "ex",
+      "pand"
+    ],
+    "meaning": "v. 扩大；扩展",
+    "example": "Reading widely helps expand your vocabulary.",
+    "translation": "广泛阅读有助于扩充词汇量。"
+  },
+  {
+    "id": "cet4-024",
+    "word": "familiar",
+    "phonetic": "/fəˈmɪliə/",
+    "syllables": [
+      "fa",
+      "mil",
+      "iar"
+    ],
+    "meaning": "adj. 熟悉的；常见的",
+    "example": "The word looks familiar but I cannot recall its meaning.",
+    "translation": "这个词看着熟悉，但我想不起意思。"
+  },
+  {
+    "id": "cet4-025",
+    "word": "function",
+    "phonetic": "/ˈfʌŋkʃn/",
+    "syllables": [
+      "func",
+      "tion"
+    ],
+    "meaning": "n. 功能；v. 运转",
+    "example": "The pause button has a simple function.",
+    "translation": "暂停按钮的功能很简单。"
+  },
+  {
+    "id": "cet4-026",
+    "word": "impact",
+    "phonetic": "/ˈɪmpækt/",
+    "syllables": [
+      "im",
+      "pact"
+    ],
+    "meaning": "n. 影响；冲击",
+    "example": "Daily practice has a lasting impact on memory.",
+    "translation": "每日练习会对记忆产生持久影响。"
+  },
+  {
+    "id": "cet4-027",
+    "word": "improve",
+    "phonetic": "/ɪmˈpruːv/",
+    "syllables": [
+      "im",
+      "prove"
+    ],
+    "meaning": "v. 改善；提高",
+    "example": "Reviewing mistakes is a good way to improve.",
+    "translation": "复盘错词是提高的好方法。"
+  },
+  {
+    "id": "cet4-028",
+    "word": "indicate",
+    "phonetic": "/ˈɪndɪkeɪt/",
+    "syllables": [
+      "in",
+      "di",
+      "cate"
+    ],
+    "meaning": "v. 表明；指示",
+    "example": "The chart indicates steady weekly growth.",
+    "translation": "图表显示每周都在稳定增长。"
+  },
+  {
+    "id": "cet4-029",
+    "word": "involve",
+    "phonetic": "/ɪnˈvɒlv/",
+    "syllables": [
+      "in",
+      "volve"
+    ],
+    "meaning": "v. 涉及；使参与",
+    "example": "Active recall involves more than reading.",
+    "translation": "主动回忆不只是阅读。"
+  },
+  {
+    "id": "cet4-030",
+    "word": "occur",
+    "phonetic": "/əˈkɜː/",
+    "syllables": [
+      "oc",
+      "cur"
+    ],
+    "meaning": "v. 发生；出现",
+    "example": "Most mistakes occur when attention drops.",
+    "translation": "大多数错误发生在注意力下降时。"
+  },
+  {
+    "id": "cet4-031",
+    "word": "participate",
+    "phonetic": "/pɑːˈtɪsɪpeɪt/",
+    "syllables": [
+      "par",
+      "tic",
+      "i",
+      "pate"
+    ],
+    "meaning": "v. 参与；参加",
+    "example": "Participate in the short quiz after each lesson.",
+    "translation": "每节课后参加一个短测试。"
+  },
+  {
+    "id": "cet4-032",
+    "word": "potential",
+    "phonetic": "/pəˈtenʃl/",
+    "syllables": [
+      "po",
+      "ten",
+      "tial"
+    ],
+    "meaning": "adj. 潜在的；n. 潜力",
+    "example": "Every learner has the potential to improve.",
+    "translation": "每个学习者都有进步的潜力。"
+  },
+  {
+    "id": "cet4-033",
+    "word": "predict",
+    "phonetic": "/prɪˈdɪkt/",
+    "syllables": [
+      "pre",
+      "dict"
+    ],
+    "meaning": "v. 预测；预言",
+    "example": "The model can predict when a word needs review.",
+    "translation": "这个模型能预测单词何时需要复习。"
+  },
+  {
+    "id": "cet4-034",
+    "word": "principle",
+    "phonetic": "/ˈprɪnsəpl/",
+    "syllables": [
+      "prin",
+      "ci",
+      "ple"
+    ],
+    "meaning": "n. 原则；原理",
+    "example": "Spaced repetition is based on a simple principle.",
+    "translation": "间隔复习基于一个简单原理。"
+  },
+  {
+    "id": "cet4-035",
+    "word": "provide",
+    "phonetic": "/prəˈvaɪd/",
+    "syllables": [
+      "pro",
+      "vide"
+    ],
+    "meaning": "v. 提供；供给",
+    "example": "The examples provide useful context for each word.",
+    "translation": "例句为每个单词提供了有用语境。"
+  },
+  {
+    "id": "cet4-036",
+    "word": "reduce",
+    "phonetic": "/rɪˈdjuːs/",
+    "syllables": [
+      "re",
+      "duce"
+    ],
+    "meaning": "v. 减少；降低",
+    "example": "Short sessions reduce the pressure to memorize.",
+    "translation": "短时学习能降低记忆压力。"
+  },
+  {
+    "id": "cet4-037",
+    "word": "reliable",
+    "phonetic": "/rɪˈlaɪəbl/",
+    "syllables": [
+      "re",
+      "li",
+      "able"
+    ],
+    "meaning": "adj. 可靠的；可信的",
+    "example": "A reliable schedule is better than a rushed one.",
+    "translation": "可靠的计划胜过临时突击。"
+  },
+  {
+    "id": "cet4-038",
+    "word": "require",
+    "phonetic": "/rɪˈkwaɪə/",
+    "syllables": [
+      "re",
+      "quire"
+    ],
+    "meaning": "v. 需要；要求",
+    "example": "Memory work requires patience and repetition.",
+    "translation": "记忆需要耐心和重复。"
+  },
+  {
+    "id": "cet4-039",
+    "word": "significant",
+    "phonetic": "/sɪɡˈnɪfɪkənt/",
+    "syllables": [
+      "sig",
+      "nif",
+      "i",
+      "cant"
+    ],
+    "meaning": "adj. 重要的；显著的",
+    "example": "Even ten minutes a day makes a significant difference.",
+    "translation": "每天十分钟也能带来显著变化。"
+  },
+  {
+    "id": "cet4-040",
+    "word": "survive",
+    "phonetic": "/səˈvaɪv/",
+    "syllables": [
+      "sur",
+      "vive"
+    ],
+    "meaning": "v. 幸存；继续存在",
+    "example": "Good notes survive long after the lesson ends.",
+    "translation": "好笔记会在课程结束后长期保留。"
   }
 ]
-

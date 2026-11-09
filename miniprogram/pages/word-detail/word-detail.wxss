@@ -1,0 +1,220 @@
+.detail-page {
+  padding-bottom: 80rpx;
+}
+
+.missing-word {
+  display: flex;
+  padding-top: 180rpx;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.missing-title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.missing-copy {
+  max-width: 500rpx;
+  margin: 18rpx 0 34rpx;
+  color: var(--muted);
+  font-size: 24rpx;
+  line-height: 1.7;
+}
+
+.word-stage {
+  display: flex;
+  min-height: 570rpx;
+  padding: 34rpx;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 36rpx;
+  color: #fffdf7;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(232, 121, 94, 0.3), transparent 33%),
+    radial-gradient(circle at 5% 105%, rgba(215, 168, 68, 0.16), transparent 36%),
+    #244d3c;
+  box-shadow: 0 24rpx 58rpx rgba(36, 77, 60, 0.2);
+}
+
+.stage-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-name {
+  color: rgba(255, 253, 247, 0.7);
+  font-size: 21rpx;
+}
+
+.favorite-button {
+  min-height: 58rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.22);
+  border-radius: 18rpx;
+  color: rgba(255, 253, 247, 0.82);
+  font-size: 20rpx;
+}
+
+.favorite-button.active {
+  border-color: transparent;
+  color: #244d3c;
+  background: #f5efe2;
+}
+
+.word-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.word-text {
+  font-family: Georgia, serif;
+  font-size: 92rpx;
+  font-weight: 700;
+  line-height: 1.08;
+  word-break: break-all;
+}
+
+.phonetic {
+  margin-top: 18rpx;
+  color: rgba(255, 253, 247, 0.68);
+  font-family: Georgia, serif;
+  font-size: 28rpx;
+}
+
+.syllable-row {
+  display: flex;
+  margin-top: 34rpx;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+
+.syllable {
+  padding: 9rpx 16rpx;
+  border-radius: 14rpx;
+  color: rgba(255, 253, 247, 0.86);
+  background: rgba(255, 255, 255, 0.1);
+  font-family: Georgia, serif;
+  font-size: 22rpx;
+}
+
+.meaning-block,
+.example-block {
+  margin-top: 18rpx;
+  padding: 30rpx;
+}
+
+.block-label {
+  display: block;
+  color: var(--coral);
+  font-size: 19rpx;
+  font-weight: 600;
+}
+
+.meaning {
+  display: block;
+  margin-top: 16rpx;
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 38rpx;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.meaning-meta {
+  display: flex;
+  margin-top: 24rpx;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+
+.meaning-meta text {
+  padding: 7rpx 13rpx;
+  border-radius: 10rpx;
+  color: var(--green);
+  background: var(--green-soft);
+  font-size: 18rpx;
+}
+
+.example {
+  display: block;
+  margin-top: 18rpx;
+  font-family: Georgia, serif;
+  font-size: 29rpx;
+  line-height: 1.7;
+}
+
+.translation {
+  display: block;
+  margin-top: 12rpx;
+  color: var(--muted);
+  font-size: 22rpx;
+  line-height: 1.7;
+}
+
+.detail-actions {
+  display: grid;
+  margin-top: 18rpx;
+  grid-template-columns: 1fr 1fr;
+  gap: 14rpx;
+}
+
+.detail-actions button {
+  width: 100%;
+  min-height: 88rpx;
+}
+
+.related-heading {
+  display: flex;
+  margin-top: 46rpx;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.related-note {
+  color: var(--muted);
+  font-size: 19rpx;
+}
+
+.related-list {
+  margin-top: 18rpx;
+  padding: 0 28rpx;
+}
+
+.related-row {
+  display: flex;
+  width: 100%;
+  min-height: 104rpx;
+  padding: 18rpx 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid rgba(31, 42, 36, 0.08);
+  text-align: left;
+}
+
+.related-row:last-child {
+  border-bottom: 0;
+}
+
+.related-word {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.related-meaning {
+  display: block;
+  margin-top: 5rpx;
+  color: var(--muted);
+  font-size: 19rpx;
+}
+
+.related-arrow {
+  color: var(--coral);
+  font-size: 28rpx;
+}

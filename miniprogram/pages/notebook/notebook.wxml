@@ -1,0 +1,58 @@
+<view class="page-shell notebook-page">
+  <view class="notebook-heading">
+    <view class="page-title">
+      <text class="title-line">把喜欢的词，</text>
+      <text class="title-line">留在一本自己的书里。</text>
+    </view>
+    <text class="notebook-intro">收藏不是终点。把想再见的词留在这里，随时回来翻一页。</text>
+  </view>
+
+  <view wx:if="{{words.length}}" class="collection-summary surface">
+    <view>
+      <text class="summary-number">{{words.length}}</text>
+      <text class="summary-label">个收藏单词</text>
+    </view>
+    <view class="summary-divider"></view>
+    <view>
+      <text class="summary-number">{{bookCount}}</text>
+      <text class="summary-label">本词书</text>
+    </view>
+    <button class="summary-action" bindtap="openExplore">继续探索</button>
+  </view>
+
+  <empty-state
+    wx:if="{{!words.length}}"
+    title="收藏本还是空白"
+    description="在词库探索或单词详情里点“收藏”，你想再见的词就会留在这里。"
+    action-text="去探索词库"
+    bind:action="openExplore"
+  />
+
+  <view wx:else class="collection-list surface">
+    <view
+      wx:for="{{words}}"
+      wx:key="id"
+      class="collection-row"
+    >
+      <button
+        class="collection-main"
+        data-id="{{item.id}}"
+        data-bookid="{{item.bookId}}"
+        bindtap="openWord"
+      >
+        <view class="book-dot" style="background: {{item.accent}};"></view>
+        <view class="collection-copy">
+          <text class="collection-word">{{item.word}}</text>
+          <text class="collection-meaning">{{item.meaning}}</text>
+          <text class="collection-book">{{item.bookName}} · {{item.bookLevel}}</text>
+        </view>
+      </button>
+      <button
+        class="remove-button"
+        data-id="{{item.id}}"
+        bindtap="removeWord"
+        aria-label="移出收藏本"
+      >移出</button>
+    </view>
+  </view>
+</view>

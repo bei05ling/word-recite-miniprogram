@@ -1,6 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/library/library",
+    "pages/search/search",
+    "pages/word-detail/word-detail",
+    "pages/notebook/notebook",
+    "pages/achievements/achievements",
     "pages/study/study",
     "pages/quiz/quiz",
     "pages/mistakes/mistakes",

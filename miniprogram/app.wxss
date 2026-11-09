@@ -1,6 +1,6 @@
 page {
   --ink: #1f2a24;
-  --muted: #708078;
+  --muted: #5f6b64;
   --paper: #f7f3ea;
   --card: #fffdf7;
   --green: #2f6b4f;

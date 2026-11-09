@@ -51,6 +51,8 @@
 | `_openid` | string | 用户标识 |
 | `wordbookId` | string | 当前词书 |
 | `learnedWordIds` | string[] | 已掌握单词 ID |
+| `studiedWordIds` | string[] | 已浏览学习过的单词 ID |
+| `dailyStudied` | object | 按 `YYYY-MM-DD` 保存每日已学单词 |
 | `quizCount` | number | 累计测试题数 |
 | `correctCount` | number | 累计答对题数 |
 | `studyDates` | string[] | 学习日期，格式 `YYYY-MM-DD` |

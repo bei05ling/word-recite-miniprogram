@@ -29,6 +29,7 @@
         label="听标准发音"
         bind:error="handleAudioError"
       />
+      <button class="detail-link" bindtap="openDetail">完整词条</button>
       <button class="skip-button" bindtap="goNext">暂时跳过</button>
     </view>
 

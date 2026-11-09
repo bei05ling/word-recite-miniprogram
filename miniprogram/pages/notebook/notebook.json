@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "收藏本",
+  "usingComponents": {
+    "empty-state": "/components/empty-state/index"
+  }
+}

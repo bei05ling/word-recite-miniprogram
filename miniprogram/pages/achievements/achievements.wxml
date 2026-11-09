@@ -1,0 +1,107 @@
+<view class="page-shell achievements-page">
+  <view class="achievement-hero">
+    <text class="level-label">当前学习身份</text>
+    <text class="level-name">{{learnerLevel}}</text>
+    <view class="hero-title">
+      <text class="hero-title-line">不是一次学会，</text>
+      <text class="hero-title-line">是一次次回来。</text>
+    </view>
+
+    <view class="level-progress">
+      <view class="level-progress-row">
+        <text>{{levelProgress.percent}}%</text>
+        <text wx:if="{{levelProgress.next}}">再掌握 {{levelProgress.remaining}} 词，成为{{levelProgress.next.title}}</text>
+        <text wx:else>已经抵达当前最高等级</text>
+      </view>
+      <view class="hero-track">
+        <view class="hero-fill" style="width: {{levelProgress.percent}}%;"></view>
+      </view>
+    </view>
+
+    <view class="badge-summary">
+      <text>{{unlockedCount}} / {{achievements.length}}</text>
+      <text>枚学习印记已经点亮</text>
+    </view>
+  </view>
+
+  <view wx:if="{{loading}}" class="achievement-loading surface">正在整理学习印记...</view>
+
+  <block wx:else>
+    <view wx:if="{{nextAchievement}}" class="next-achievement surface">
+      <view class="next-mark">{{nextAchievement.mark}}</view>
+      <view class="next-copy">
+        <text class="next-label">离你最近的一枚</text>
+        <text class="next-title">{{nextAchievement.title}}</text>
+        <text class="next-desc">{{nextAchievement.description}} · 当前 {{nextAchievement.progressText}}</text>
+      </view>
+    </view>
+
+    <view class="section-heading">
+      <text class="section-title">28 天学习轨迹</text>
+      <text class="section-note">{{activeDays}} 天有记录</text>
+    </view>
+    <view class="activity-panel surface">
+      <view class="activity-grid">
+        <view
+          wx:for="{{recentDays}}"
+          wx:key="key"
+          class="activity-day {{item.active ? 'active' : ''}}"
+          aria-label="{{item.key}} {{item.active ? '有学习记录' : '没有学习记录'}}"
+        >{{item.day}}</view>
+      </view>
+      <view class="activity-legend">
+        <view class="legend-item"><view class="legend-dot"></view><text>无记录</text></view>
+        <view class="legend-item"><view class="legend-dot active"></view><text>已学习</text></view>
+      </view>
+    </view>
+
+    <view class="section-heading">
+      <text class="section-title">全部印记</text>
+      <text class="section-note">{{achievements.length}} 枚目标</text>
+    </view>
+    <view class="achievement-list">
+      <view
+        wx:for="{{achievements}}"
+        wx:key="id"
+        class="achievement-row {{item.unlocked ? 'unlocked' : ''}}"
+      >
+        <view class="achievement-mark">{{item.mark}}</view>
+        <view class="achievement-copy">
+          <view class="achievement-title-row">
+            <text class="achievement-title">{{item.title}}</text>
+            <text class="achievement-state">{{item.unlocked ? '已解锁' : item.progressText}}</text>
+          </view>
+          <text class="achievement-desc">{{item.description}}</text>
+          <view class="achievement-track">
+            <view
+              class="achievement-fill"
+              style="width: {{item.unlocked ? 100 : item.progressPercent}}%;"
+            ></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="milestone-strip surface">
+      <view class="milestone">
+        <text class="milestone-value">{{totalLearned}}</text>
+        <text class="milestone-label">掌握单词</text>
+      </view>
+      <view class="milestone-divider"></view>
+      <view class="milestone">
+        <text class="milestone-value">{{streak}}</text>
+        <text class="milestone-label">连续学习</text>
+      </view>
+      <view class="milestone-divider"></view>
+      <view class="milestone">
+        <text class="milestone-value">{{quizCount}}</text>
+        <text class="milestone-label">完成测试</text>
+      </view>
+    </view>
+
+    <view class="achievement-actions">
+      <button class="primary-button" bindtap="startStudy">学一个新词</button>
+      <button class="secondary-button" bindtap="startQuiz">做一轮测试</button>
+    </view>
+  </block>
+</view>
